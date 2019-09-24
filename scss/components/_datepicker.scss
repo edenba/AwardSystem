@@ -1,0 +1,208 @@
+﻿#ui-datepicker-div{
+    border: 1px solid #2ab0c5;
+}
+
+
+
+   
+.ui-datepicker {
+    border: 0;
+    padding: 0;
+    
+    border: 1px solid #2ab0c5;
+  
+
+    .ui-datepicker-title select {
+        color: #fff;
+        background-color: #2ab0c5;
+        padding: 10px;
+        border: 0;
+        outline: none;
+        font-size: 1.5rem;
+    }
+
+    .ui-datepicker-header {
+        background-color: #2ab0c5;
+        padding: 0;
+
+
+        .ui-datepicker-title {
+            background-color: #fff;
+            color:#00003b;
+            margin: 0;
+
+            .ui-datepicker select.ui-datepicker-month,
+            .ui-datepicker select.ui-datepicker-year {
+
+            }
+            .ui-datepicker-year{
+                display:inherit;
+            }
+            .ui-datepicker-month{
+                font-weight:bold;
+                    font-size: 19px;
+            }
+        }
+
+        .ui-icon {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            text-indent: initial;
+            font-size: 0;
+            background-image: none;
+            color: #fff;
+            cursor: pointer;
+
+
+            &.ui-state-hover, &.ui-datepicker-prev-hover {
+                border: 0 !important;
+                outline: none;
+                background-color: transparent;
+            }
+        }
+
+        .ui-datepicker-prev {
+            .ui-icon {
+                &:after {
+                    content: "\e258";
+                    position: absolute;
+                    font-family: 'Glyphicons Halflings';
+                    font-size: 16px;
+                    color:#00003b;
+                }
+            }
+        }
+
+        .ui-datepicker-next {
+            .ui-icon {
+                &:after {
+                    content: "\e257";
+                    position: absolute;
+                    font-family: 'Glyphicons Halflings';
+                    font-size: 16px;
+                       color:#00003b;
+                }
+            }
+        }
+    }
+
+    .ui-datepicker-calendar {
+        font-size: 1em;
+
+        th{
+            color:white;
+            background-color:#00003b;
+        }
+        .ui-datepicker td {
+            text-align: center;
+
+
+            a {
+                text-align: center;
+            }
+        }
+
+        .ui-datepicker-current-day {
+            background-color: #fff;
+            color:#00003b;
+            border-radius: 20px;
+
+            .ui-state-active{
+                background-color: #2ab0c5;
+                color: #fff;
+                border-radius: 17px;
+            
+            }
+        }
+
+    }
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button, html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+    border: 0;
+    background-color: transparent;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  color:#454545;
+
+}
+
+
+.ui-datepicker td span, .ui-datepicker td a {
+    text-align: center;
+}
+
+.ui-datepicker td {
+    border: 0;
+    padding: 5px;
+    text-align: center;  
+    border-radius:17px;
+   
+ 
+
+    &:hover {
+       
+        border-radius:17px;
+
+         color:#fff;
+}
+
+        a {
+            color: #fff;
+        }
+    }
+
+
+.ui-widget.ui-widget-content {
+    border: 0;
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+    width: 40%;
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+    margin-left: 0;
+    margin-top: 0;
+    top: 50%;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    top: 15px;
+    width: 0;
+    height: 0;
+}
+
+
+    .ui-datepicker .ui-datepicker-next span {
+        left: 20px;
+    }
+
+    .ui-datepicker .ui-datepicker-prev span {
+        right: 5px;
+    }
+
+.ui-datepicker-trigger {
+    background: none;
+    box-shadow: none;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.input-group.date {
+    flex-direction: row-reverse;
+
+    button {
+        border-bottom: 1px solid #999a9c;
+        cursor: pointer;
+    }
+}

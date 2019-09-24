@@ -1,0 +1,913 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <link href="../../css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="../../css/themes-jquery-ui.min.css" rel="stylesheet" />
+    <link href="bundle.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h1 class="mb-3">My Profile</h1>
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+
+
+                                <button class="btn btn-block" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-2 col-md-1 d-flex justify-content-center align-items-center py-2 panel radius border-white">
+                                                <div class="icon ">
+                                                    <span class="icon-person"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-11 d-flex justify-content-start align-items-center py-2 panel radius border-white">
+                                                <h5 class="mb-0">
+                                                    Personal Details
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-2 col-md-1 radius border-white"></div>
+                                            <div class="col col-md-11 radius border-white py-4">
+                                                <div class="row pt-4 mb-4">
+                                                    <div class="col-5 col-md-2 float-right">
+                                                        <h6>Title</h6>
+                                                        <select name="title-prefix" id="title-prefix" class="phone-prefix title-prefix">
+                                                            <option>Mr</option>
+                                                            <option>Mrs</option>
+                                                            <option>Miss</option>
+                                                            <option>Ms</option>
+                                                            <option>Mstr</option>
+                                                            <option>Sir</option>
+                                                            <option>Prof</option>
+                                                            <option>Dr</option>
+                                                            <option>JUDG</option>
+                                                            <option>ADVOCATE</option>
+                                                            <option>Rabbi</option>
+                                                        </select>
+                                                    </div>
+                                         
+
+                                                    <div class="col-md-3">
+                                                        <h6>Full Name</h6>
+                                                        <p id="titleName">MR. Israel Israeli</p>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <h6>Date of birth</h6>
+                                                        <p>30.06.1968</p>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <h6>Israeli I.D No</h6>
+                                                        <p>123456789</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <!--<div class="form-group has-float-label">
+
+                                                            <input type="email" class="form-control is-invalid" id="email" aria-describedby="emailHelp" placeholder="">
+                                                            <label for="email" class="float-label">*E-mail address</label>
+                                                            <div class="invalid-feedback">
+                                                                Member Doesn't Exist
+                                                            </div>
+                                                        </div>-->
+
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <div class="form-group">
+                                                                    <h6 class="mb-3">*Gender</h6>
+                                                                    <div class="radio-group">
+                                                                        <div class="d-flex">
+                                                                            <div class="w-50">
+                                                                                <input type="radio" id="Male" name="gender" checked>
+                                                                                <label for="Male" class="radio-label">Male</label>
+
+                                                                            </div>
+                                                                            <div class="w-50">
+                                                                                <input type="radio" id="Female" name="gender">
+                                                                                <label for="Female" class="radio-label">Female</label>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="form-group has-float-label">
+
+                                                            <input type="text" class="form-control" id="passport-no" aria-describedby="passport-no" placeholder="">
+                                                            <label for="passport-no" class="float-label">Passport No.</label>
+                                                        </div>
+                                                        <div class="form-group has-float-label">
+
+                                                            <input type="text" class="form-control" id="expiry-date" aria-describedby="expiry-date" placeholder="">
+                                                            <label for="" class="float-label">*Passport Expiry Date</label>
+                                                        </div>
+                                                        <div class="form-group has-float-label">
+                                                            <div class="ui-widget">
+                                                                <input type="text" class="form-control" id="nationality" aria-describedby="nationality" placeholder="">
+                                                                <label for="nationality" class="float-label">Nationality</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <div class="form-group">
+                                                                    <h6 class="mb-3">*Choose Language for Flight Up</h6>
+                                                                    <div class="radio-group">
+                                                                        <div class="d-flex">
+                                                                            <div class="w-50">
+                                                                                <input type="radio" id="english" name="language" checked><label for="english" class="radio-label">English</label>
+                                                                            </div>
+                                                                            <div class="w-50">
+                                                                                <input type="radio" id="hebrew" name="language"><label for="hebrew" class="radio-label">Hebrew</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <button class="btn btn-block collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-2 col-md-1 d-flex justify-content-center align-items-center py-2 panel radius  border-white">
+                                                <div class="icon ">
+                                                    <span class="icon-phone"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-11 d-flex justify-content-start align-items-center py-2 panel radius border-white">
+                                                <h5 class="mb-0">
+                                                    Contact Information
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+
+                            </div>
+
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-2 col-md-1 radius border-white"></div>
+                                            <div class="col col-md-11 radius border-white py-4 ">
+                                                <div class="row">
+                                                    <div class="col-md-12  contact-info__body">
+
+                                                        <div id="phoneElem">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <h6 class="">
+                                                                        טלפון נייד
+                                                                    </h6>
+                                                                    <div class="arrow-border"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group editNum">
+                                                                <div class="editNum-wrap">
+                                                                    <span class="float-right underline">
+                                                                        123654987
+                                                                    </span>
+                                                                    <span id="editNumBtn" class="float-left">
+                                                                        <img src="../../images/edit_icon.png" />
+                                                                        עריכה
+                                                                    </span>
+                                                                </div>
+                                                                <div class="add-btn ml-10 float-right" id="add-phone-btn">
+                                                                    <i class="icon-plus"></i>
+                                                                </div>
+                                                                <span class="float-right">הוסף טלפון</span>
+
+
+                                                            </div>
+                                                            <div class="telCode">
+                                                                <div class="row">
+                                                                    <div class="col-md-12 ">
+                                                                        <p class="textCode">
+                                                                            כדי לעדכן את הנייד שלך, שלחנו לך קוד חד פעמי מטעמי
+                                                                            אבטחת מידע למספר הטלפון המעודכן אצלנו *****
+                                                                        </p>
+                                                                        <p class="textCode">
+                                                                            את הקוד שקיבלת יש להקליד כאן וללחצוץ על "המשך"
+                                                                        </p>
+                                                                        <div class="inputCode-wrap inputCode-error">
+                                                                            <input class="inputCode" />
+                                                                            <p>
+
+                                                                                <img src="../../images/caution-icon.png" />
+                                                                                הקוד שהזנת אינו תקין. יש להקליד אותו שוב
+
+                                                                            </p>
+                                                                        </div>
+                                                                        <p class="textCode">
+                                                                            הקוד לא הגיע?
+                                                                            <a class="sendCode" href="#">שלחו לי שוב</a>
+                                                                        </p>
+                                                                        <p class="success">
+
+                                                                            <img src="../../images/v-green.png" />
+                                                                            שלחנו לך את הקוד פעם נוספת
+                                                                        </p>
+                                                                        <div class="buttonsCode">
+                                                                            <button type="submit" class="btn cancelButton">ביטול</button>
+
+
+                                                                            <button type="submit" class="btn nextButton">המשך</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+
+
+                                                            <div class="enterNum">
+                                                                <div class="row">
+                                                                    <div class="col-md-12 ">
+                                                                        <p class="textCode">
+                                                                            עתה ניתן להזין את מספר הטלפון הראשי שלך
+
+                                                                        </p>
+                                                                        <div class="phone-group">
+                                                                            <div class="bold">מס’ טלפון מעודכן</div>
+                                                                            <div class="col-7 col-md-5 float-right">
+                                                                                <div class="form-group has-float-label">
+                                                                                    <input type="text" class="form-control" placeholder="">
+                                                                                    <label for="" class="float-label">מספר טלפון</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-5 col-md-2 float-right">
+                                                                                <select name="phone-prefix" id="phone-prefix" class="phone-prefix">
+                                                                                    <option>052</option>
+                                                                                    <option>054</option>
+                                                                                    <option>058</option>
+                                                                                    <option>050</option>
+                                                                                    <option>057</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                        </div>
+
+
+
+
+
+                                                                        <div class="buttonsCode">
+                                                                            <button type="submit" class="btn cancelButton cancel-num">ביטול</button>
+                                                                            <button type="submit" class="btn nextButton accept-num">המשך</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                            <div class="finish-success">
+                                                                <div class="row">
+                                                                    <div class="col-md-12 ">
+                                                                        <div class="imgFinish"><img src="../../images/.png" /></div>
+
+                                                                        <div class="textFinish">
+                                                                            מספר הטלפון
+                                                                            החדש עודכן!
+                                                                        </div>
+                                                                        <div class="finishButton">
+                                                                            <button type="submit" class="btn">סיום</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="finish-error">
+                                                                <div class="row">
+                                                                    <div class="col-md-12 ">
+                                                                        <div class="imgFinish"><img src="../../images/caution-big-icon.png" /></div>
+
+                                                                        <div class="textFinishError">
+                                                                            עקב ריבוי נסיונות כושלים,
+                                                                            לא ניתן להמשיך ולהזין את  הקוד.
+                                                                            ניתן לקבל קוד חדש ולנסות בשנית
+                                                                        </div>
+                                                                        <div class="finishButton">
+                                                                            <button type="submit" class="btn">שליחת קוד חדש</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+
+
+
+
+
+
+
+                                                        <div id="emailElem">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <h6>
+                                                                        כתובת דוא"ל
+                                                                    </h6>
+                                                                    <div class="arrow-border"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group add-mail-group">
+                                                                <div class="add-btn ml-10 float-right" id="add-mail-btn">
+                                                                    <i class="icon-plus"></i>
+                                                                </div>
+                                                                <span class="float-right">הוסף דוא"ל</span>
+                                                                <div class="addEmail-wrap">
+                                                                    <span class="float-right">
+                                                                        ayala@gmail.com
+                                                                    </span>
+                                                                    <span id="editEmail" class="float-left">
+                                                                        <img src="../../images/edit_icon.png" />
+                                                                        עריכה
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="finish-error">
+                                                                <div class="row">
+                                                                    <div class="col-md-12 ">
+                                                                        <div class="imgFinish"><img src="../../images/caution-big-icon.png" /></div>
+
+                                                                        <div class="textFinishError">
+                                                                            כדי לעדכן את הדוא"ל שלך
+                                                                            עליך לעדכן תחילה את מספר הנייד שלך.
+                                                                            להשלמת המידע יש לפנות
+                                                                            למוקד השירות בטלפון
+                                                                            <b>03-9771111</b>
+                                                                        </div>
+                                                                        <div class="finishButton">
+                                                                            <button type="submit" class="btn">סיום</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input_fields_wrap">
+                                                        </div>
+                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 form-wrap">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <h6 class="">
+                                                                        Address Details
+                                                                    </h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <div class="form-group has-float-label">
+                                                                        <div class="ui-widget">
+                                                                            <input type="text" class="form-control" id="country" aria-describedby="country" placeholder="">
+                                                                            <label for="country" class="float-label">*Type your Country</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <div class="form-group has-float-label">
+                                                                        <div class="ui-widget">
+                                                                            <input type="text" class="form-control" id="country" aria-describedby="country" placeholder="">
+                                                                            <label for="country" class="float-label">*Type your City</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <div class="form-group has-float-label">
+                                                                        <input type="text" id="street" class="form-control" aria-describedby="street" placeholder="">
+                                                                        <label for="" class="float-label">*Street</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <div class="form-group has-float-label">
+                                                                        <div class="ui-widget">
+                                                                            <input type="text" class="form-control" id="state-code" aria-describedby="state-code" placeholder="">
+                                                                            <label for="state-code" class="float-label">*state code</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col-5 col-md-6">
+                                                                    <div class="form-group has-float-label">
+                                                                        <input type="text" id="number" class="form-control" aria-describedby="number" placeholder="">
+                                                                        <label for="" class="float-label">*Number</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col  col-md-6">
+                                                                    <div class="form-group has-float-label">
+                                                                        <input type="text" id="street" class="form-control" aria-describedby="street" placeholder="">
+                                                                        <label for="" class="float-label">Address Zip Code</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-5  col-md-6">
+                                                                    <div class="form-group has-float-label">
+                                                                        <input type="text" id="number" class="form-control" aria-describedby="number" placeholder="">
+                                                                        <label for="" class="float-label">Mailbox</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col  col-md-6">
+                                                                    <div class="form-group has-float-label">
+                                                                        <input type="text" id="street" class="form-control" aria-describedby="street" placeholder="">
+                                                                        <label for="" class="float-label">Mailbox Zip code</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <button class="btn btn-block collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-2 col-md-1 d-flex justify-content-center align-items-center py-2 panel radius border-white">
+                                                <div class="icon ">
+                                                    <span class="icon-people"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-11 d-flex justify-content-start align-items-center py-2 panel radius border-white">
+                                                <h5 class="mb-0">
+                                                    Family an Company Details
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-2 col-md-1 radius border-white"></div>
+                                            <div class="col col-md-11 radius border-white py-4">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <h6 class="font-weight-bold">Family Members</h6>
+                                                        <p class="fw-500 mb-0">Family members not on list</p>
+                                                        <p class="footnote">
+                                                            Please note that only Frequent Flyer Club members can be added to your
+                                                            Family members list.
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="family-members__section">
+                                                    <div class="row family-container">
+
+                                                        <div class="col">
+                                                            <div class="edit-buttons d-flex justify-content-end">
+                                                                <!--<button type="button" class="px-3 edit-js">
+                                                                    <span class="icon-edit px-2"></span><span>Edit</span>
+                                                                </button>-->
+                                                                <button type="button" class="delete-js">
+                                                                    <span class="icon-close px-2"></span><span>Delete</span>
+                                                                </button>
+
+                                                            </div>
+                                                            <!-- list of existing family members -->
+                                                            <div class="wrapper py-3">
+                                                                <div class="family-members-data show">
+                                                                    <div class="row ">
+                                                                        <div class="col-6 col-md-3">
+                                                                            <h6 class="font-weight-bold mb-0">First name</h6>
+                                                                            <span class="firstName">Israel</span>
+                                                                        </div>
+                                                                        <div class="col-6 col-md-3">
+                                                                            <h6 class="font-weight-bold mb-0">Last name</h6>
+                                                                            <span class="lastName">Yaakovich</span>
+                                                                        </div>
+                                                                        <div class="col-6 col-md-3">
+                                                                            <h6 class="font-weight-bold mb-0">Membership number</h6>
+                                                                            <span class="memberNum">12345678</span>
+                                                                        </div>
+                                                                        <div class="col-6 col-md-3">
+                                                                            <h6 class="font-weight-bold mb-0">Relationship</h6>
+                                                                            <span class="spouse">Son</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- edit family member -->
+                                                                <!--<div class="family-members-fields edit collapse">
+                                                                    <div class="row ">
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group has-float-label">
+                                                                                <input type="text" class="form-control firstName" id="first-name" aria-describedby="first-name" placeholder="">
+                                                                                <label for="first-name">First name</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group has-float-label">
+                                                                                <input type="text" class="form-control lastName" id="last-name" aria-describedby="last-name" placeholder="">
+                                                                                <label for="last-name">Last name</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group has-float-label">
+                                                                                <input type="text" class="form-control memberNum is-invalid" id="member-no" aria-describedby="member number" required placeholder="">
+                                                                                <label for="member-no">Member No</label>
+                                                                                <div class="invalid-feedback">
+                                                                                    Member Doesn't Exist.
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <select name="relationship" id="relationship" class="spouse">
+                                                                                    <option value="No selection">No selection</option>
+                                                                                    <option value="father">Father</option>
+                                                                                    <option value="Mother">Mother</option>
+                                                                                    <option value="Son">Son</option>
+                                                                                    <option value="Daughter">Daughter</option>
+                                                                                    <option value="Brother">Brother</option>
+                                                                                    <option value="Sister">Sister</option>
+                                                                                    <option value="Husband">Husband</option>
+                                                                                    <option value="Wife">Wife</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>-->
+                                                            </div>
+                                                            <br />
+                                                            <!-- add new family member -->
+                                                            <div class="newMembersContainer">
+                                                            </div>
+                                                          
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col">
+
+                                                        <div class="form-group d-flex">
+                                                            <div class="add-btn add-family-member en" id="add-family-btn">
+                                                                <i class="icon-plus"></i>
+                                                            </div>
+                                                            <span class="px-3 add-family-member en">Add family member</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <h6 class="font-weight-bold">Company Details</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group has-float-label">
+                                                            <input type="text" class="form-control" id="company-name" aria-describedby="company-name" placeholder="">
+                                                            <label for="company-name" class="float-label">Company/Organization</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group has-float-label">
+                                                            <input type="text" class="form-control" id="company-type" aria-describedby="company-type" placeholder="">
+                                                            <label for="company-type" class="float-label">Company Type</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group has-float-label">
+                                                            <input type="text" class="form-control" id="position" aria-describedby="position" placeholder="">
+                                                            <label for="position" class="float-label">Position</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <button class="btn btn-block collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-2 col-md-1 d-flex justify-content-center align-items-center py-2 panel radius border-white">
+                                                <div class="icon ">
+                                                    <span class="icon-plane"><span class="path1"></span><span class="path2"></span></span>
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-11 d-flex justify-content-start align-items-center py-2 panel radius border-white">
+                                                <h5 class="mb-0">
+                                                    Flight Preferences
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-2 col-md-1 radius border-white"></div>
+                                            <div class="col col-md-11 radius border-white py-4">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <h6 class="font-weight-bold">Seat</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <div class="form-group">
+
+                                                                    <div class="radio-group">
+                                                                        <div class="d-flex">
+                                                                            <div class="w-50">
+                                                                                <input type="radio" id="aisle" name="position">
+                                                                                <label for="aisle" class="radio-label">Aisle</label>
+
+                                                                            </div>
+                                                                            <div class="w-50">
+                                                                                <input type="radio" id="window" name="position">
+                                                                                <label for="window" class="radio-label">Window</label>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <h6 class="font-weight-bold mb-0">Preferred Beverage</h6>
+
+                                                                <p class="footnote">
+                                                                    The service is offered only in First Class and Business Class
+                                                                </p>
+
+                                                                <div class="form-group">
+                                                                    <select name="beverage" id="beverage" class="">
+                                                                        <option>No selection</option>
+                                                                        <option>Asian vegeterian meal</option>
+                                                                        <option>Chicken meal</option>
+                                                                        <option>Child meal</option>
+                                                                        <option>Child meal</option>
+                                                                        <option>Asian vegeterian meal</option>
+                                                                        <option>Asian vegeterian meal</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <h6 class="font-weight-bold mb-0">Preferred Meal</h6>
+
+                                                                <p class="footnote">
+                                                                   EL AL cannot guarantee provision of kosher or other special meals ordered for code share filghts
+                                                                </p>
+                                                                <div class="form-group">
+                                                                    <select name="meal" id="meal" class="">
+                                                                        <option>No selection</option>
+                                                                        <option>Asian vegeterian meal</option>
+                                                                        <option>Chicken meal</option>
+                                                                        <option>Child meal</option>
+                                                                        <option>Child meal</option>
+                                                                        <option>Asian vegeterian meal</option>
+                                                                        <option>Asian vegeterian meal</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <p class="footnote pt-4 bottom">
+                                                                    Please note that your preferences are considered to be requests and we apologize in advance if
+                                                                    we are unable to fulfill them for whatever reason.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <button class="btn btn-block collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-2 col-md-1 d-flex justify-content-center align-items-center py-2 panel radius border-white">
+                                                <div class="icon ">
+                                                    <span class="icon-sitting_person"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-11 d-flex justify-content-start align-items-center py-2 panel radius border-white">
+                                                <h5 class="mb-0">
+                                                    Commercial Upgrades
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-2 col-md-1 radius border-white"></div>
+                                            <div class="col col-md-11 radius border-white py-4">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <p>Would you be interested in being upgraded 48 hours prior to departure in exchange for points?</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <div class="form-group">
+
+                                                                    <div class="radio-group">
+                                                                        <div class="d-flex">
+                                                                            <div class="w-50">
+                                                                                <input type="radio" id="yes1" name="upgrade1" checked>
+                                                                                <label for="yes1" class="radio-label">Yes</label>
+
+                                                                            </div>
+                                                                            <div class="w-50">
+                                                                                <input type="radio" id="no1" name="upgrade1">
+                                                                                <label for="no1" class="radio-label">No</label>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <p>
+                                                                    Would you be interested in being upgraded 48 hours prior to departure even when you are
+                                                                    accompanied by another person?
+
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <div class="form-group">
+                                                                    <div class="radio-group">
+                                                                        <div class="d-flex">
+                                                                            <div class="w-50">
+                                                                                <input type="radio" id="yes2" name="upgrade2" checked>
+                                                                                <label for="yes2" class="radio-label">Yes</label>
+
+                                                                            </div>
+                                                                            <div class="w-50">
+                                                                                <input type="radio" id="no2" name="upgrade2">
+                                                                                <label for="no2" class="radio-label">No</label>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <p>
+                                                                    Upgrades are granted to Platinum, Gold, Silver members only, on a space available basis, 48 hours prior to departure, for a reduced number of points. Please note that this upgrade is granted to members meeting the conditions set out in the frequent flyer club regulations for upgrades.
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-5">
+                        <div class="mb-4">
+
+                            <input type="checkbox" class="form-check-input" name="optionsRadios" id="option-1" value="option1">
+                            <label for="option-1" class="form-check-label">*I would like to receive promotional material from the Matmid Frequent Flyer Club by email.</label>
+
+                        </div>
+
+
+                        <div class="mb-4">
+
+                            <input type="checkbox" class="form-check-input" name="optionsRadios" id="option-2" value="option2">
+                            <label for="option-2" class="form-check-label">
+                                I would like to receive promotional material from the Matmid Frequent Flyer Club via SMS messages on my cell phone.
+                            </label>
+
+                        </div>
+                        <div>
+                            <p>*Additional information can be found in the Matmid Frequent Flyer Club’s <a class="Privacy-Policy" href="#">Privacy Policy.</a></p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-end mb-5">
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-block btn-primary">Save</button>
+                        </div>
+                       
+                    </div>
+                   
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer></footer>
+    <script src="../../js/jquery/jquery.min.js"></script>
+    <script src="../../js/jquery/jquery-ui.min.js"></script>
+
+    <script src="../../js/bootstrap/popper.min.js"></script>
+    <script src="../../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/profile.js"></script>
+
+</body>
+</html>

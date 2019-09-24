@@ -1,0 +1,98 @@
+﻿.datepicker[readonly=readonly]{
+    background-color:#fff !important;
+    cursor: text !important;
+    }
+.edit-buttons{
+      border-bottom: 1px solid gainsboro;
+    padding-bottom: 11px;
+}
+.family-container {
+    margin-bottom: 50px;
+
+    @include media-breakpoint-down(xs) {
+        h6 {
+            font-size: 14px;
+        }
+    }
+
+    .edit-buttons {
+
+
+        [class^="icon-"] {
+            color: $color-blue-light;
+        }
+    }
+
+    .wrapper {
+        border-bottom: 1px solid $color-gray-medium;
+        border-top: 1px solid $color-gray-medium;
+
+        [class^="col-"]:first-child {
+            @include media-breakpoint-down(xs) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+
+
+    .form-control {
+        height: 50px;
+        /*border: 1px solid #ccc;*/
+        color: $color-font-base;
+
+        &:focus {
+            border-color: #ccc;
+            box-shadow: none;
+        }
+    }
+
+ 
+
+    &.has-float-label {
+        .form-control {
+            position: relative;
+        }
+
+        label {
+            position: absolute;
+            top: 25%;
+            padding: 0 12px;
+            margin-bottom: 0;
+            pointer-events: none;
+            transition: all 0.3s;
+
+            @include media-breakpoint-down(xs) {
+                font-size: 12px;
+            }
+        }
+
+        &.focused {
+
+
+            label {
+                top: 0;
+                font-size: 12px;
+                #{$left}: 0;
+                color: #c6c6c6;
+
+                @include media-breakpoint-down(xs) {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+    @if $dir == rtl {
+        .phone-group {
+        flex-direction: row-reverse;
+    }
+}
+

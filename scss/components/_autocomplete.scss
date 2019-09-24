@@ -1,0 +1,34 @@
+﻿
+.ui-widget.ui-autocomplete {
+    max-height: 200px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+
+    @include theme-scrollbar();
+}
+
+.ui-menu .ui-menu-item-wrapper {
+    border-bottom: 1px solid #ccc;
+    color: $color-font-base;
+    padding: 7px 30px 7px 15px;
+
+    &:hover {
+        background-color: $color-font-base;
+        color: $color-blue-light;
+    }
+
+    &.ui-state-active {
+        background-color: $color-font-base;
+        color: $color-blue-light;
+    }
+}
+
+.ui-menu .ui-menu-item {
+    padding-right: 40px;
+
+    &:last-child {
+        .ui-menu-item-wrapper {
+            border-bottom: none;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+﻿
+/*select menu*/
+.ui-selectmenu-menu {
+    & > ul {
+        @include media-breakpoint-up(sm) {
+            max-height: 200px;
+            border: 1px solid #ccc;
+            overflow-y: auto;
+            @include theme-scrollbar();
+        }
+    }
+}
+
+    .ui-selectmenu-menu .ui-widget.ui-widget-content {
+
+        .ui-menu-item {
+            padding-right: 0;
+        }
+    }
+
+.ui-selectmenu-button.ui-button {
+    width: 100%;
+    background-color: #fff;
+}
+
+.ui-selectmenu-button {
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    .ui-selectmenu-icon {
+        display: none;
+    }
+
+    &::after {
+        content: "\e907";
+        font-family: 'icomoon';
+        position: absolute;
+        #{$right}: 15px;
+        font-size: 8px;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .contact-info__body {
+     
+
+        @if $dir == rtl {
+
+            .phone-group {
+                [class*="col-"]:nth-of-type(1) {
+                    padding-#{$left}: 15px;
+                }
+                  [class*="col-"]:nth-of-type(2) {
+                    padding-left: 0;
+                    padding-right:15px;
+                }
+            }
+        }
+
+
+        .ui-selectmenu-button {
+            &.ui-button {
+                padding: 0 10px;
+            }
+
+            &:after {
+                #{$right}: 10px;
+            }
+        }
+    }
+}

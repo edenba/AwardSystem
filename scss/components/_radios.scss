@@ -1,0 +1,160 @@
+﻿.box-group {
+    position: relative;
+    height: 70px;
+    border: 1px solid rgba(62, 186, 204, 0.3);
+    border-radius: 4px;
+    font-size: 16px;
+    cursor:pointer;
+        .products-table-icon-gift {
+            width: 25px;
+            position: absolute;
+            right: 0;
+            cursor:pointer;
+        }
+
+    .mini-icon {
+        width: 24px;
+        /*height: 24px;*/
+    }
+
+    .pass-name {
+       max-width:170px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding:4px;
+    }
+
+    .products-table {
+        width: 100%;
+        .icon{
+margin-left:10px;
+        }
+
+        .products-table-small-text {
+            font-size: 12px;
+            vertical-align: bottom;
+        }
+
+        .products-table-large-text {
+            padding-left: 12px;
+        }
+
+    
+    }
+}
+
+.passengers {
+    label {
+        display: table;
+    }
+
+    span {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.box-option {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+}
+
+label {
+    cursor: pointer !important;
+}
+
+#upgrade-select .select-wrap {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 30px 0 0 6px;
+    display: none;
+
+    select {
+        max-width: 44%;
+        margin-right: 5px;
+        border-top-left-radius: 2.5px;
+        border-top-right-radius: 2.5px;
+        height: 35px;
+        border: 0;
+        border-bottom: 1px solid black;
+        padding: 0;
+
+        &:active, &:focus {
+            outline: none;
+            border: 0;
+        }
+    }
+}
+
+.small-label {
+    align-items: unset !important;
+    line-height: 23px !important;
+
+    .icon {
+        padding-left: 6px !important;
+        padding-right: 0 !important;
+
+        img {
+            max-width: 20px;
+        }
+    }
+
+    .upgrade-title {
+        font-size: 12px;
+        padding-left: 2px !important;
+        padding-top: 3px !important;
+    }
+}
+
+.radio-label {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.box-option + label {
+    align-items: center;
+    height: 100%;
+    display: block;
+    align-items: center;
+    display: table;
+    width:100%;
+
+    .icon {
+        display: inline-block;
+        padding-right: 3px;
+        text-align: left;
+        padding-left: 8px;
+    }
+
+    .icon-gift {
+        padding-bottom: 8px;
+    }
+}
+
+.box-option:checked + label {
+    color: #000;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(62, 186, 204, 0.3);
+    }
+}
+
+.checked-product {
+        background-color: rgba(62, 186, 204, 0.3);
+}
+
+.box-option:not(:checked) + label {
+    border: transparent;
+}

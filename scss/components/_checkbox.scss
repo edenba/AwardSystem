@@ -1,0 +1,359 @@
+﻿.default-checkbox:checked,
+.default-checkbox:not(:checked) {
+    display: none;
+}
+
+    .default-checkbox:checked + label,
+    .default-checkbox:not(:checked) + label {
+        position: relative;
+        padding-#{$left}: 30px;
+        cursor: pointer;
+        line-height: 20px;
+        display: inline-block;
+        color: #454648;
+    }
+
+        .default-checkbox:checked + label:before,
+        .default-checkbox:not(:checked) + label:before {
+            content: '';
+            position: absolute;
+            #{$left}: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #3599b0;
+        }
+        .default-checkbox:checked + label:before{
+            background-color:#3599b0;
+        }
+        .default-checkbox:checked + label:after,
+        .default-checkbox:not(:checked) + label:after {
+           
+            content: "\e906";
+            font-family: 'icomoon';
+            font-size: 10px;
+            position: absolute;
+            top: 0;
+            #{$left}: 3px;
+            transition: all 0.2s ease;
+        }
+
+
+        .default-checkbox:not(:checked) + label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+
+        .default-checkbox:checked + label:after {
+            opacity: 1;
+            transform: scale(1);
+            color:#fff;
+        }
+
+#segments {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    .checkbox-container {
+        display: block;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s all;
+        right: 45px;
+        top: 15px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .checkbox-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+        border-radius: 2px;
+        border: 1px solid #3ebacc;
+    }
+    /* When the checkbox is checked, add a blue background */
+    .checkbox-container input:checked ~ .checkmark {
+        background-color: #3ebacc;
+        border: 1px solid transparent;
+    }
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    /* Show the checkmark when checked */
+    .checkbox-container input:checked ~ .checkmark:after {
+        display: block;
+    }
+    /* Style the checkmark/indicator */
+    .checkbox-container .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 7px;
+        height: 12px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+
+
+    h5 {
+        font-size: 14px;
+    }
+
+    .segment,
+    .first-segment {
+        padding-top: 16px;
+        position: relative;
+        border: 1px solid rgba(62, 186, 204, 0.3);
+        border-radius: 4px;
+        height: 60px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+
+        &:hover {
+            .start-btn {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .start-btn {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.2s all;
+            right: 20px;
+            top: 10px;
+            line-height: 1;
+            font-weight: bold;
+            text-align: left;
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+
+            span {
+                float: left;
+            }
+
+            img {
+                float: right;
+            }
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+        .remove-btn {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.2s all;
+            right: 14px;
+            top: 10px;
+            line-height: 1;
+            text-align: center;
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+
+
+
+        .done-btn {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.2s all;
+            right: 20px;
+            top: 10px;
+            line-height: 1;
+            border: 0;
+            cursor: pointer;
+            text-align: center;
+            color: white;
+            background-color: #3ebacc;
+            width: 69px;
+            height: 35px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bolder;
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+
+        .info {
+            padding-right: 40px;
+            padding-top: 8px;
+
+            .line {
+                width: 56px;
+                background-color: #484f57;
+                height: 2px;
+                display: inline-block;
+                position: relative;
+                margin-left: 40px;
+                margin-right: 20px;
+                margin-bottom: 10px;
+
+                .circle-left {
+                    width: 7px;
+                    height: 7px;
+                    background-color: #484f57;
+                    border-radius: 3px;
+                    position: absolute;
+                    left: -7px;
+                    top: -2.5px;
+                }
+
+                .circle-right {
+                    @extend .circle-left;
+                    background-color: transparent;
+                    left: auto;
+                    right: -7px;
+                    border: 1px solid #484f57;
+                }
+            }
+        }
+
+        .depart,
+        .arrival {
+            position: relative;
+            display: inline-block;
+
+            p {
+                margin-bottom: 0;
+            }
+
+            .date {
+                position: absolute;
+                left: 0;
+                top: -15px;
+                font-size: 12px;
+            }
+
+            .location {
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+
+        .group-num {
+            font-weight: bold;
+            display: none;
+        }
+    }
+
+    .disabled {
+        opacity: 0.3;
+
+        .start-btn {
+            display: none !important;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .checkbox-container {
+            display: none !important;
+        }
+    }
+
+    .active {
+        background-color: rgba(62, 186, 204, 0.3);
+
+        .done-btn {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .start-btn {
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+    }
+
+    .checked {
+        background-color: rgba(62, 186, 204, 0.3);
+    }
+
+    .show-check {
+        .checkbox-container {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .start-btn {
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+    }
+
+    .finished {
+        background-color: rgba(62, 186, 204, 0.3);
+
+        .start-btn {
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+    }
+
+    .master {
+        .remove-btn {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    }
+
+    .blocked {
+        .start-btn {
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+    }
+
+    .create-btn {
+        text-align: center;
+        border: 1px solid rgba(62, 186, 204, 0.3);
+        border-radius: 4px;
+        background: #3ebacc;
+        height: 47px;
+        width: 100%;
+        margin-left:0;
+        color: white;
+        font-weight: bolder;
+        cursor: pointer;
+        margin-top: 1.5rem;
+    }
+}

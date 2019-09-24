@@ -1,0 +1,33 @@
+﻿
+
+// insert data to width by percent
+
+.slidercontainer{
+    position:relative;
+        width: 100px;
+    height: 11px;
+    margin-left: 10px;
+    margin-top: 10px;
+        margin-left: 10px;
+    margin-right: 15px;
+    background: #E4E8E8;
+    float: left;
+    border-radius: 3.5px;
+    .slider-indicator{
+    position:absolute;
+    right:0;
+     background: #3ebacc;
+     width:20%;
+     height:100%;
+     -webkit-transition: .2s all;
+     -o-transition: .2s all;
+     transition: .2s all;
+     border-radius: 3.5px;
+    }
+}
+
+.zero-data{
+    position:absolute;
+    right:-15px;
+       top: -5px;
+}
