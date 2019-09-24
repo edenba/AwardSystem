@@ -1,0 +1,1199 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <link href="../css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="../css/themes-jquery-ui.min.css" rel="stylesheet" />
+    <link href="../icons/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <link href="../css/select2.min.css" rel="stylesheet" />
+    <link href="../css/css-ltr/style-ltr.css" rel="stylesheet" />
+</head>
+<body class="">
+
+
+    <header id="header">
+        <div id="pre-nav">
+            <div class="container">
+                <span class="float-left"><b>Award System</b></span>
+                <span class="float-right">Hello, Carmit</span>
+            </div>
+        </div>
+
+        <div id="nav" class="header-shadow">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <ul class="navbar-nav list-inline">
+                        <li class="nav-item">
+                            <div id="hidePnr">
+                                <p>
+                                    <strong>PNR:</strong>
+                                    LLX1234
+                                </p>
+                                <img onclick="editInput('#hidePnr', '#editPnr', 'LLX1234')" src="../icons/star-24-px-copy.png" />
+                            </div>
+                            <div id="editPnr" class="edit-details-pnr" style="display:none">
+                                <label>PNR</label>
+                                <input value="LLX1234" type="text" />
+                                <button>change</button>
+                                <div class="error-msg" style="display:none">
+                                    Member Doesn't Exist
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="hideMember">
+                                <p>
+                                    <strong>Member Number</strong>
+                                    GL 1234567
+                                </p>
+                                <img onclick="editInput('#hideMember', '#editMember', 'LLX1234')" src="../icons/star-24-px-copy.png" />
+                            </div>
+                            <div id="editMember" class="edit-details-member" style="display:none">
+                                <label>Member Number</label>
+                                <input value="GL 1234567" type="text" />
+                                <button data-toggle="modal" data-target="#modalChangeMember">change</button>
+                                <div class="error-msg" style="display:none">
+                                    Member Doesn't Exist
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="nav-item">
+                            <p class="relative">
+                                <div class="border-left"></div>
+                                <strong>Full Name:</strong>
+                                Tal Shafrir
+                            </p>
+
+                        </li>
+                        <li class="nav-item">
+                            <p><strong>Total Points:</strong>22,123</p>
+                            <div class="slidercontainer">
+                                <div class="slider-indicator">
+                                    <span style="position:relative;bottom:20px;">2590</span>
+                                </div>
+                                <span class="zero-data">0</span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="container mt-4" id="main-container">
+        <div class="row">
+            <div class="col-md-9 wrapper-bg-white">
+                <div>
+                    <div class="back">
+                        <img src="../icons/back-14-px.png" />
+
+                        <span>back</span>
+
+                    </div>
+                    <div class="close d-none">
+
+                        <img src="../icons/delete-14-px.png" />
+
+                        <span>close</span>
+
+                    </div>
+
+
+
+                    <h1 class="mt-4">
+                        <b>Product: Baggage</b>
+                    </h1>
+                    <div class="select-wrap-currency">
+                        <select name="currency" id="currency" class="col-md-4">
+                            <option value="" disabled selected>currency</option>
+                            <option> € EUR</option>
+                            <option> $ USD</option>
+                            <option> ₪ ILS</option>
+                        </select>
+                    </div>
+                    <div class="general-error-message d-none">
+
+                        <img src="../icons/error-14-px.png" />error message error message error message error message error message
+                    </div>
+
+
+                    <span class="open-all-tab">
+                        <img src="../icons/open-row-24-px.png" />
+                        Open all
+                    </span>
+
+                    <span class="close-all-tab d-none">
+                        <img src="../icons/close-row-24-px.png" />
+                        Close all
+                    </span>
+                </div>
+                <section>
+                    <!--Accordion wrapper-->
+                    <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+                        <!-- Accordion card -->
+                        <div class="card">
+
+                            <!-- Card header -->
+                            <div class="card-header" role="tab" id="headingOne">
+                                <img class="float-left open-baggage" src="../icons/star-24-px.png" data-isOpen="false" />
+
+                                <div class="close-collapse shown">
+
+                                    <img src="../icons/delete-14-px.png" />
+                                </div>
+                                <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="mb-0">
+                                        <div class="card-details">
+                                            <span>Segment:</span>
+                                            <div class="departure-segment">
+                                                <p><b>TLV</b></p>
+                                            </div>
+                                            <div class="wrapper-oval" id="oval-collapse">
+                                                <div class="oval-black"></div>
+                                                <div class="line"></div>
+                                                <div class="oval-white"></div>
+                                            </div>
+                                            <div class="destination-segment">
+                                                <p><b>LHR</b></p>
+                                            </div>
+                                            <div class="name-passenger">
+                                                <img src="../icons/woman-34-px.png" />
+
+                                                Lily Bowman
+                                            </div>
+                                        </div>
+
+                                        <i class="fa fa-angle-down rotate-icon"></i>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Card body -->
+                            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordionEx">
+                                <div class="card-body">
+                                    <div class="advanced-upgrade d-none">
+                                        <b>Selected Reward: </b> Advanced upgrade
+                                        <span onclick="editUpgrade(this, '#collapseOne', '#headingOne', 'edit')" class="edit-advanced">
+                                            <img src="../icons/star-24-px-copy.png" />
+                                        </span>
+                                        <span>
+                                            <img onclick="editUpgrade(this, '#collapseOne', '#headingOne', 'delete')" src="../icons/trash-24-px.png" />
+                                        </span>
+                                    </div>
+
+                                    <div class="tabel-baggage d-none" id="gift-table">
+                                        <table class="table table-flight">
+                                            <thead>
+                                                <tr class="table-header">
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Reward ID</th>
+                                                    <th scope="col">Origin</th>
+                                                    <th scope="col">Destination</th>
+                                                    <th scope="col">Trip type</th>
+                                                    <th scope="col">Cabin</th>
+                                                    <th scope="col">RBD List</th>
+                                                    <th scope="col">Upgraded Cabin</th>
+                                                    <th scope="col">Upgraded RBD List</th>
+                                                    <th scope="col" aria-hidden="true"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <button onclick="selectAward(this)" class="select-button">Select</button>
+
+                                                        <!--<button class="selected-button d-none">Selected</button>-->
+
+                                                    </td>
+                                                    <td>10930</td>
+                                                    <td>Thornton</td>
+                                                    <td>JFK</td>
+                                                    <td>OWY</td>
+                                                    <td>Y</td>
+                                                    <td>M.N.E</td>
+                                                    <td>C</td>
+                                                    <td>D</td>
+                                                    <td class="td-collapse open-condition">
+                                                        Conditions
+                                                        <a href="javascript:void(0)"><img src="../icons/open-row-24-px.png" /></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="wrapper-tr-condition" style="display:none;">
+
+                                                    <td class="condition" colspan="12">
+                                                        <div class="condition-inner">
+                                                            <div class="condition-text">Flight Products For Entitlements RNB event 2113 Subject to clubs and promotions regulations</div>
+
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button onclick="selectAward(this)" class="select-button">Select</button>
+
+                                                        <!--<button class="selected-button d-none">Selected</button>-->
+
+                                                    </td>
+                                                    <td>16930</td>
+                                                    <td>TLV</td>
+                                                    <td>JFK</td>
+                                                    <td>OWY</td>
+                                                    <td>Y</td>
+                                                    <td>M.N.E</td>
+                                                    <td>C</td>
+                                                    <td>D</td>
+                                                    <td class="td-collapse open-condition">
+                                                        Conditions
+                                                        <a href="javascript:void(0)"><img src="../icons/open-row-24-px.png" /></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr class="wrapper-tr-condition" style="display:none;">
+
+                                                    <td class="condition" colspan="12">
+                                                        <div class="condition-inner">
+                                                            <div class="condition-text">Flight Products For Entitlements RNB event 2113 Subject to clubs and promotions regulations</div>
+
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr class="different-id">
+                                                    <td>
+                                                        <button onclick="selectAward(this)" class="select-button">Select</button>
+
+                                                        <!--<button class="selected-button d-none">Selected</button>-->
+
+                                                    </td>
+                                                    <td>12390</td>
+                                                    <td>TLV</td>
+                                                    <td>JFK</td>
+                                                    <td>OWY</td>
+                                                    <td>Y</td>
+                                                    <td>M.N.E</td>
+                                                    <td>C</td>
+                                                    <td>D</td>
+                                                    <td class="td-collapse open-condition">
+                                                        Conditions
+                                                        <a href="javascript:void(0)"><img src="../icons/open-row-24-px.png" /></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr class="wrapper-tr-condition" style="display:none;">
+
+                                                    <td class="condition" colspan="12">
+                                                        <div class="condition-inner">
+                                                            <div class="condition-text">Flight Products For Entitlements RNB event 2113 Subject to clubs and promotions regulations</div>
+
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                    <div class="mssage-alert">All feids are mandatory</div>
+                                    <div class="row div-heading">
+                                        <div class="col-md-6 heading">
+                                            <b>Price:</b>
+                                        </div>
+                                        <div class="col-md-6 heading">
+                                            <b>Charged price:</b>
+                                        </div>
+                                    </div>
+
+                                    <div class="edit-currency">
+
+                                        <table class="table-currency">
+
+                                            <tr class="fare">
+                                                <td>Fare:</td>
+                                                <td>
+                                                    <label class="regular-label">in local currency</label>
+                                                    <input name="local-currency-price" class="local-currency-price" />
+                                                </td>
+                                                <td class="pl-1">
+                                                    <label class="regular-label">in points</label>
+                                                    <input name="points-price" class="points-price" />
+                                                </td>
+                                                <td class="pl-4">
+                                                    <label class="regular-label">in local currency</label>
+                                                    <input name="local-currency-charged" class="local-currency-charged" />
+                                                </td>
+                                                <td class="pl-1">
+                                                    <label class="regular-label">in points</label>
+                                                    <input name="points-charged" class="points-charged" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="add-surcharge"> + Add Surcharge</td>
+
+                                            </tr>
+                                            <tr class="surcharge-tr d-none">
+                                                <td class="surcharge-td">
+                                                    <img onclick="closeSurcharge()" src="../icons/delete-14-px.png" />
+                                                    Surcharge:
+                                                </td>
+                                                <td>
+                                                    <label class="regular-label">in local currency</label>
+                                                    <input name="local-currency-price" class="local-currency-price" />
+                                                </td>
+                                                <td class="pl-1">
+                                                    <label class="regular-label">in points</label>
+                                                    <input name="points-price" class="points-price" />
+                                                </td>
+                                                <td class="pl-4">
+                                                    <label class="regular-label">in local currency</label>
+                                                    <input name="local-currency-charged" class="local-currency-charged" />
+                                                    <div class="total-label"><b>20,000</b></div>
+                                                </td>
+                                                <td class="pl-1">
+                                                    <label class="regular-label">in points</label>
+                                                    <input name="points-charged" class="points-charged" />
+                                                    <div class="total-label"><b>20,000</b></div>
+                                                </td>
+
+                                            </tr>
+                                            <tr class="total-tr d-none">
+                                                <td class="total"> Total: </td>
+
+                                            </tr>
+
+                                        </table>
+
+                                    </div>
+                                    <div class="wrapper-buttons">
+                                        <div class="buttons-inner float-right">
+                                            <span class="copy-button">
+                                                <b>Copy to next</b>
+                                            </span>
+                                            <span class="next-button">
+                                                <button>Next</button>
+                                            </span>
+                                        </div>
+                                        <div class="bottom-error float-left">
+                                            There is something missing
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion card -->
+                        <!-- Accordion card -->
+                        <div class="card hide1">
+
+                            <!-- Card header -->
+                            <div class="card-header" role="tab" id="headingTwo">
+                                <img class="float-left open-baggage" src="../icons/star-24-px.png" data-isOpen="false" />
+
+                                <div class="close-collapse shown">
+
+                                    <img src="../icons/delete-14-px.png" />
+                                </div>
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <div class="mb-0">
+                                        <div class="card-details">
+                                            <span>Segment:</span>
+                                            <div class="departure-segment">
+                                                <p><b>TLV</b></p>
+                                            </div>
+                                            <div class="wrapper-oval" id="oval-collapse">
+                                                <div class="oval-black"></div>
+                                                <div class="line"></div>
+                                                <div class="oval-white"></div>
+                                            </div>
+                                            <div class="destination-segment">
+                                                <p><b>LHR</b></p>
+                                            </div>
+                                            <div class="name-passenger">
+                                                <img src="../icons/woman-34-px.png" />
+
+                                                Lily Bowman
+                                            </div>
+                                        </div>
+
+                                        <i class="fa fa-angle-down rotate-icon"></i>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Card body -->
+                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordionEx">
+                                <div class="card-body">
+                                    <div class="advanced-upgrade d-none">
+                                        <b>Selected Reward: </b> Advanced upgrade
+                                        <span onclick="editUpgrade(this, '#collapseTwo', '#headingTwo', 'edit')" class="edit-advanced">
+                                            <img src="../icons/star-24-px-copy.png" />
+                                        </span>
+                                        <span>
+                                            <img onclick="editUpgrade(this, '#collapseTwo', '#headingTwo', 'delete')" src="../icons/trash-24-px.png" />
+                                        </span>
+                                    </div>
+
+                                    <div class="tabel-baggage d-none" id="gift-table">
+                                        <table class="table table-flight">
+                                            <thead>
+                                                <tr class="table-header">
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Reward ID</th>
+                                                    <th scope="col">Origin</th>
+                                                    <th scope="col">Destination</th>
+                                                    <th scope="col">Trip type</th>
+                                                    <th scope="col">Cabin</th>
+                                                    <th scope="col">RBD List</th>
+                                                    <th scope="col">Upgraded Cabin</th>
+                                                    <th scope="col">Upgraded RBD List</th>
+                                                    <th scope="col" aria-hidden="true"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <button onclick="selectAward(this)" class="select-button">Select</button>
+
+                                                        <!--<button class="selected-button d-none">Selected</button>-->
+
+                                                    </td>
+                                                    <td>10930</td>
+                                                    <td>Thornton</td>
+                                                    <td>JFK</td>
+                                                    <td>OWY</td>
+                                                    <td>Y</td>
+                                                    <td>M.N.E</td>
+                                                    <td>C</td>
+                                                    <td>D</td>
+                                                    <td class="td-collapse open-condition">
+                                                        Conditions
+                                                        <a href="javascript:void(0)"><img src="../icons/open-row-24-px.png" /></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="wrapper-tr-condition" style="display:none;">
+
+                                                    <td class="condition" colspan="12">
+                                                        <div class="condition-inner">
+                                                            <div class="condition-text">Flight Products For Entitlements RNB event 2113 Subject to clubs and promotions regulations</div>
+
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button onclick="selectAward(this)" class="select-button">Select</button>
+
+                                                        <!--<button class="selected-button d-none">Selected</button>-->
+
+                                                    </td>
+                                                    <td>16930</td>
+                                                    <td>TLV</td>
+                                                    <td>JFK</td>
+                                                    <td>OWY</td>
+                                                    <td>Y</td>
+                                                    <td>M.N.E</td>
+                                                    <td>C</td>
+                                                    <td>D</td>
+                                                    <td class="td-collapse open-condition">
+                                                        Conditions
+                                                        <a href="javascript:void(0)"><img src="../icons/open-row-24-px.png" /></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr class="wrapper-tr-condition" style="display:none;">
+
+                                                    <td class="condition" colspan="12">
+                                                        <div class="condition-inner">
+                                                            <div class="condition-text">Flight Products For Entitlements RNB event 2113 Subject to clubs and promotions regulations</div>
+
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr class="different-id">
+                                                    <td>
+                                                        <button onclick="selectAward(this)" class="select-button">Select</button>
+
+                                                        <!--<button class="selected-button d-none">Selected</button>-->
+
+                                                    </td>
+                                                    <td>12390</td>
+                                                    <td>TLV</td>
+                                                    <td>JFK</td>
+                                                    <td>OWY</td>
+                                                    <td>Y</td>
+                                                    <td>M.N.E</td>
+                                                    <td>C</td>
+                                                    <td>D</td>
+                                                    <td class="td-collapse open-condition">
+                                                        Conditions
+                                                        <a href="javascript:void(0)"><img src="../icons/open-row-24-px.png" /></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr class="wrapper-tr-condition" style="display:none;">
+
+                                                    <td class="condition" colspan="12">
+                                                        <div class="condition-inner">
+                                                            <div class="condition-text">Flight Products For Entitlements RNB event 2113 Subject to clubs and promotions regulations</div>
+
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                    <div class="mssage-alert">All feids are mandatory</div>
+                                    <div class="row div-heading">
+                                        <div class="col-md-6 heading">
+                                            <b>Price:</b>
+                                        </div>
+                                        <div class="col-md-6 heading">
+                                            <b>Charged price:</b>
+                                        </div>
+                                    </div>
+
+                                    <div class="edit-currency">
+
+                                        <table class="table-currency">
+
+                                            <tr class="fare">
+                                                <td>Fare:</td>
+                                                <td>
+                                                    <label class="regular-label">in local currency</label>
+                                                    <input name="local-currency-price" class="local-currency-price" />
+
+                                                </td>
+                                                <td class="pl-1">
+                                                    <label class="regular-label">in points</label>
+                                                    <input name="points-price" class="points-price" />
+                                                </td>
+                                                <td class="pl-4">
+                                                    <label class="regular-label">in local currency</label>
+                                                    <input name="local-currency-charged" class="local-currency-charged" />
+                                                </td>
+                                                <td class="pl-1">
+                                                    <label class="regular-label">in points</label>
+                                                    <input name="points-charged" class="points-charged" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="add-surcharge"> + Add Surcharge</td>
+
+                                            </tr>
+                                            <tr class="surcharge-tr d-none">
+                                                <td class="surcharge-td">
+                                                    <img onclick="closeSurcharge()" src="../icons/delete-14-px.png" />
+                                                    Surcharge:
+                                                </td>
+                                                <td>
+                                                    <label class="regular-label">in local currency</label>
+                                                    <input name="local-currency-price" class="local-currency-price" />
+                                                </td>
+                                                <td class="pl-1">
+                                                    <label class="regular-label">in points</label>
+                                                    <input name="points-price" class="points-price" />
+                                                </td>
+                                                <td class="pl-4">
+                                                    <label class="regular-label">in local currency</label>
+                                                    <input name="local-currency-charged" class="local-currency-charged" />
+                                                    <div class="total-label"><b>20,000</b></div>
+                                                </td>
+                                                <td class="pl-1">
+                                                    <label class="regular-label">in points</label>
+                                                    <input name="points-charged" class="points-charged" />
+                                                    <div class="total-label"><b>20,000</b></div>
+                                                </td>
+
+                                            </tr>
+                                            <tr class="total-tr d-none">
+                                                <td class="total"> Total: </td>
+
+                                            </tr>
+
+                                        </table>
+
+                                    </div>
+                                    <div class="wrapper-buttons">
+                                        <div class="buttons-inner float-right">
+                                            <span class="copy-button">
+                                                <b>Copy to next</b>
+                                            </span>
+                                            <span class="next-button">
+                                                <button>Next</button>
+                                            </span>
+                                        </div>
+                                        <div class="bottom-error float-left">
+                                            There is something missing
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion card -->
+                        <!-- Accordion card -->
+                        <div class="card hide2">
+
+                            <!-- Card header -->
+                            <div class="card-header" role="tab" id="headingThree">
+                                <img class="float-left open-baggage" src="../icons/star-24-px.png" data-isOpen="false" />
+
+                                <div class="close-collapse shown">
+
+                                    <img src="../icons/delete-14-px.png" />
+                                </div>
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <div class="mb-0">
+                                        <div class="card-details">
+                                            <span>Segment:</span>
+                                            <div class="departure-segment">
+                                                <p><b>TLV</b></p>
+                                            </div>
+                                            <div class="wrapper-oval" id="oval-collapse">
+                                                <div class="oval-black"></div>
+                                                <div class="line"></div>
+                                                <div class="oval-white"></div>
+                                            </div>
+                                            <div class="destination-segment">
+                                                <p><b>LHR</b></p>
+                                            </div>
+                                            <div class="name-passenger">
+                                                <img src="../icons/woman-34-px.png" />
+
+                                                Lily Bowman
+                                            </div>
+                                        </div>
+
+                                        <i class="fa fa-angle-down rotate-icon"></i>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Card body -->
+                            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordionEx">
+                                <div class="card-body">
+                                    <div class="advanced-upgrade d-none">
+                                        <b>Selected Reward: </b> Advanced upgrade
+                                        <span onclick="editUpgrade(this, '#collapseThree', '#headingThree', 'edit')" class="edit-advanced">
+                                            <img src="../icons/star-24-px-copy.png" />
+                                        </span>
+                                        <span>
+                                            <img onclick="editUpgrade(this, '#collapseThree', '#headingThree', 'delete')" src="../icons/trash-24-px.png" />
+                                        </span>
+                                    </div>
+
+                                    <div class="tabel-baggage d-none" id="gift-table">
+                                        <table class="table table-flight">
+                                            <thead>
+                                                <tr class="table-header">
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Reward ID</th>
+                                                    <th scope="col">Origin</th>
+                                                    <th scope="col">Destination</th>
+                                                    <th scope="col">Trip type</th>
+                                                    <th scope="col">Cabin</th>
+                                                    <th scope="col">RBD List</th>
+                                                    <th scope="col">Upgraded Cabin</th>
+                                                    <th scope="col">Upgraded RBD List</th>
+                                                    <th scope="col" aria-hidden="true"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <button onclick="selectAward(this)" class="select-button">Select</button>
+
+                                                        <!--<button class="selected-button d-none">Selected</button>-->
+
+                                                    </td>
+                                                    <td>10930</td>
+                                                    <td>Thornton</td>
+                                                    <td>JFK</td>
+                                                    <td>OWY</td>
+                                                    <td>Y</td>
+                                                    <td>M.N.E</td>
+                                                    <td>C</td>
+                                                    <td>D</td>
+                                                    <td class="td-collapse open-condition">
+                                                        Conditions
+                                                        <a href="javascript:void(0)"><img src="../icons/open-row-24-px.png" /></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="wrapper-tr-condition" style="display:none;">
+
+                                                    <td class="condition" colspan="12">
+                                                        <div class="condition-inner">
+                                                            <div class="condition-text">Flight Products For Entitlements RNB event 2113 Subject to clubs and promotions regulations</div>
+
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button onclick="selectAward(this)" class="select-button">Select</button>
+
+                                                        <!--<button class="selected-button d-none">Selected</button>-->
+
+                                                    </td>
+                                                    <td>16930</td>
+                                                    <td>TLV</td>
+                                                    <td>JFK</td>
+                                                    <td>OWY</td>
+                                                    <td>Y</td>
+                                                    <td>M.N.E</td>
+                                                    <td>C</td>
+                                                    <td>D</td>
+                                                    <td class="td-collapse open-condition">
+                                                        Conditions
+                                                        <a href="javascript:void(0)"><img src="../icons/open-row-24-px.png" /></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr class="wrapper-tr-condition" style="display:none;">
+
+                                                    <td class="condition" colspan="12">
+                                                        <div class="condition-inner">
+                                                            <div class="condition-text">Flight Products For Entitlements RNB event 2113 Subject to clubs and promotions regulations</div>
+
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr class="different-id">
+                                                    <td>
+                                                        <button onclick="selectAward(this)" class="select-button">Select</button>
+
+                                                        <!--<button class="selected-button d-none">Selected</button>-->
+
+                                                    </td>
+                                                    <td>12390</td>
+                                                    <td>TLV</td>
+                                                    <td>JFK</td>
+                                                    <td>OWY</td>
+                                                    <td>Y</td>
+                                                    <td>M.N.E</td>
+                                                    <td>C</td>
+                                                    <td>D</td>
+                                                    <td class="td-collapse open-condition">
+                                                        Conditions
+                                                        <a href="javascript:void(0)"><img src="../icons/open-row-24-px.png" /></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr class="wrapper-tr-condition" style="display:none;">
+
+                                                    <td class="condition" colspan="12">
+                                                        <div class="condition-inner">
+                                                            <div class="condition-text">Flight Products For Entitlements RNB event 2113 Subject to clubs and promotions regulations</div>
+
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                    <div class="mssage-alert">All feids are mandatory</div>
+                                    <div class="row div-heading">
+                                        <div class="col-md-6 heading">
+                                            <b>Price:</b>
+                                        </div>
+                                        <div class="col-md-6 heading">
+                                            <b>Charged price:</b>
+                                        </div>
+                                    </div>
+
+                                    <div class="edit-currency">
+
+                                        <table class="table-currency">
+
+                                            <tr class="fare">
+                                                <td>Fare:</td>
+                                                <td>
+                                                    <label class="regular-label">in local currency</label>
+                                                    <input name="local-currency-price" class="local-currency-price" />
+
+                                                </td>
+                                                <td class="pl-1">
+                                                    <label class="regular-label">in points</label>
+                                                    <input name="points-price" class="points-price" />
+                                                </td>
+                                                <td class="pl-4">
+                                                    <label class="regular-label">in local currency</label>
+                                                    <input name="local-currency-charged" class="local-currency-charged" />
+                                                </td>
+                                                <td class="pl-1">
+                                                    <label class="regular-label">in points</label>
+                                                    <input name="points-charged" class="points-charged" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="add-surcharge"> + Add Surcharge</td>
+
+                                            </tr>
+                                            <tr class="surcharge-tr d-none">
+                                                <td class="surcharge-td">
+                                                    <img onclick="closeSurcharge()" src="../icons/delete-14-px.png" />
+                                                    Surcharge:
+                                                </td>
+                                                <td>
+                                                    <label class="regular-label">in local currency</label>
+                                                    <input name="local-currency-price" class="local-currency-price" />
+                                                </td>
+                                                <td class="pl-1">
+                                                    <label class="regular-label">in points</label>
+                                                    <input name="points-price" class="points-price" />
+                                                </td>
+                                                <td class="pl-4">
+                                                    <label class="regular-label">in local currency</label>
+                                                    <input name="local-currency-charged" class="local-currency-charged" />
+                                                    <div class="total-label"><b>20,000</b></div>
+                                                </td>
+                                                <td class="pl-1">
+                                                    <label class="regular-label">in points</label>
+                                                    <input name="points-charged" class="points-charged" />
+                                                    <div class="total-label"><b>20,000</b></div>
+                                                </td>
+
+                                            </tr>
+                                            <tr class="total-tr d-none">
+                                                <td class="total"> Total: </td>
+
+                                            </tr>
+
+                                        </table>
+
+                                    </div>
+                                    <div class="wrapper-buttons">
+                                        <div class="buttons-inner float-right">
+                                            <span class="copy-button">
+                                                <b>Copy to next</b>
+                                            </span>
+                                            <span class="next-button">
+                                                <button>Next</button>
+                                            </span>
+                                        </div>
+                                        <div class="bottom-error float-left">
+                                            There is something missing
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion card -->
+                    </div>
+                    <!--/.Accordion wrapper-->
+                    <div class="done-button mb-3">
+                        <button>Done</button>
+                    </div>
+                </section>
+
+
+            </div>
+
+            <div class="col-md-3 wrapper-bg-gray">
+
+                <h3 class="mt-4"><b>Selected Awards</b></h3>
+
+                <div class="selected-awards border-none">
+                    <!--<div class="wrapper-text">
+                        <p> No awards were </p>
+                        <p> selected yet</p>
+                    </div>-->
+                    <!--card 1-->
+                    <div class="detail-box">
+                        <div>
+                            <b>Baggage</b>
+                            <img class="edit-box" src="../icons/star-24-px-copy.png" />
+                        </div>
+                        <div>TLV - LHR</div>
+                        <div>Liora Fink</div>
+                        <div>280 Points</div>
+                        <div class="detail-box-member">
+                            <span>GL 1234567</span>
+                            <span>Tal Shafrir</span>
+                        </div>
+                    </div>
+
+                    <!--card 2-->
+                    <div class="detail-box">
+                        <div>
+                            <b>Baggage</b>
+                            <img class="edit-box" src="../icons/star-24-px-copy.png" />
+                        </div>
+                        <div>TLV - LHR</div>
+                        <div>Liora Fink</div>
+                        <div class="rewardId">
+                            <b>Reward ID:</b> 16930
+                        </div>
+                        <div class="detail-box-member">
+                            <span>GL 1234567</span>
+                            <span>Tal Shafrir</span>
+                        </div>
+                    </div>
+
+                    <!--card 3 disabeld-->
+                    <div class="detail-box disabled">
+                        <img class="hide-box" src="../icons/eye-24-px.png" />
+                        <div class="ifdisabled">
+                            <div class="no-pad">
+                                <b>Baggage</b>
+                            </div>
+                            <div>TLV - LHR</div>
+                            <div>Liora Fink</div>
+                            <div>280 Points</div>
+                            <div class="detail-box-member disabled">
+                                <span>GL 1234567</span>
+                                <span>Tal Shafrir</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--card 4 disabeld-->
+                    <div class="detail-box disabled">
+                        <img class="float-right hide-box" src="../icons/eye-24-px.png" />
+                        <div class="ifdisabled">
+                            <div class="no-pad">
+                                <b>Baggage</b>
+                            </div>
+                            <div>TLV - LHR</div>
+                            <div>Liora Fink</div>
+                            <div class="rewardId">
+                                <b>Reward ID:</b> 16930
+                            </div>
+                            <div class="detail-box-member disabled">
+                                <span>GL 1234567</span>
+                                <span>Tal Shafrir</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card 5 disabeld + icon-->
+                    <div class="detail-box disabled">
+                        <img class="float-right ifdisabled" src="../icons/eye-24-px.png" />
+                        <div class="ifdisabled">
+                            <div class="no-pad">
+                                <b>Baggage</b>
+                            </div>
+                            <div>TLV - LHR</div>
+                            <div>Liora Fink</div>
+                            <div>280 Points</div>
+                            <div class="detail-box-member disabled">
+                                <span>GL 1234567</span>
+                                <span>Tal Shafrir</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card 6 disabeld + icon-->
+                    <div class="detail-box disabled">
+                        <img class="float-right ifdisabled" src="../icons/star-24-px-copy.png" />
+                        <div class="ifdisabled">
+                            <div class="no-pad">
+                                <b>Baggage</b>
+                            </div>
+                            <div>TLV - LHR</div>
+                            <div>Liora Fink</div>
+                            <div>280 Points</div>
+                            <div class="detail-box-member disabled">
+                                <span>GL 1234567</span>
+                                <span>Tal Shafrir</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="chargeBtn">
+                    <p><strong>Charge: </strong><span>850 Points</span></p>
+                    <button>Charge Account</button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div id="loader" style="top: 0;position: fixed;text-align: center;left: 0;width: 100%;height: 100%;padding-top: 384px;background: #ffffffe3;display:none">
+        <img style="width: 160px;" src="../images/Spinner-1.5s-200px.gif" />
+    </div>
+
+    <!--modal change member-->
+    <div class="modal fade" id="modalChangeMember" tabindex="-1" role="dialog" aria-labelledby="modalChangeMemberLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span><img src="../icons/alart-44-px.png" /></span>
+                </div>
+                <div class="modal-body">
+                    Changing member number will erase all the changes that have been made.
+
+                    Are you sure you want to continue?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary cancel-btn" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary continue-btn" data-dismiss="modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal account was charged successfully-->
+    <div class="modal fade" id="charged-successfully" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span><img src="../icons/v-44-px.png" /></span>
+                </div>
+                <div class="modal-body">
+                    The account was charged successfully
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary keep-btn" data-dismiss="modal">Keep working</button>
+                    <button type="button" class="btn btn-primary done-btn" data-dismiss="modal" data-toggle="modal" data-target="#error-validation">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal General error validation-->
+    <div class="modal fade" id="error-validation" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>
+                        <img src="../icons/x-44-px.png" />
+                    </span>
+                </div>
+                <div class="modal-body">
+                    General error validation
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary  close-button" data-dismiss="modal" data-toggle="modal" data-target="#charged-successfully-error">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal The account was charged successfully, but an error.-->
+    <div class="modal fade" id="charged-successfully-error" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span><img src="../icons/alart-44-px.png" /></span>
+                </div>
+                <div class="modal-body">
+                    <div class="big-font">The account was charged successfully, but an error occurrd during update data in Amadeus.</div>
+                    <div class="big-font">
+                        Please insert the commands manually:
+                    </div>
+                    <div class="font-small">
+                        RM CTP CLASSIC BONUS LY222631/CN-16437343 600.00EUR=506.28USD=723PNT / PAID 150.00EUR /S1/P2
+                    </div>
+
+                    <div class="copy-div">copy</div>
+
+                    <div class="font-small">
+                        RM CTP CLASSIC BONUS LY222631/CN-16437343 600.00EUR=506.28USD=723PNT / PAID 150.00EUR /S1/P2
+                    </div>
+
+                    <div class="copy-div">copy</div>
+
+                    <div class="font-small">
+                        RM CTP CLASSIC BONUS LY222631/CN-16437343 600.00EUR=506.28USD=723PNT / PAID 150.00EUR /S1/P2
+                    </div>
+
+                    <div class="copy-div">copy</div>
+
+                    <div class="font-small">
+                        RM CTP CLASSIC BONUS LY222631/CN-16437343 600.00EUR=506.28USD=723PNT / PAID 150.00EUR /S1/P2
+                    </div>
+
+                    <div class="copy-div">copy</div>
+
+                    <div class="font-small">
+                        RM CTP CLASSIC BONUS LY222631/CN-16437343 600.00EUR=506.28USD=723PNT / PAID 150.00EUR /S1/P2
+                    </div>
+
+                    <div class="copy-div">copy</div>
+
+                    <div class="font-small">
+                        RM CTP CLASSIC BONUS LY222631/CN-16437343 600.00EUR=506.28USD=723PNT / PAID 150.00EUR /S1/P2
+                    </div>
+
+                    <div class="copy-div">copy</div>
+
+                    <div class="font-small">
+                        RM CTP CLASSIC BONUS LY222631/CN-16437343 600.00EUR=506.28USD=723PNT / PAID 150.00EUR /S1/P2
+                    </div>
+
+                    <div class="copy-div">copy</div>
+
+                    <div class="font-small">
+                        RM CTP CLASSIC BONUS LY222631/CN-16437343 600.00EUR=506.28USD=723PNT / PAID 150.00EUR /S1/P2
+                    </div>
+
+                    <div class="copy-div">copy</div>
+
+                    <div class="font-small">
+                        RM CTP CLASSIC BONUS LY222631/CN-16437343 600.00EUR=506.28USD=723PNT / PAID 150.00EUR /S1/P2
+                    </div>
+
+                    <div class="copy-div">copy</div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary cancel-btn" data-dismiss="modal">Keep working</button>
+                    <button type="button" class="btn btn-primary continue-btn" data-dismiss="modal">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal delete last collapse-->
+    <div class="modal fade" id="delete-collapse" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>
+                        <img src="../icons/alart-44-px.png" />
+                    </span>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to erase the last award for the current selection?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary no-btn" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary yes-btn">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/jquery/jquery.min.js"></script>
+    <script src="../js/jquery/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/bootstrap/popper.min.js"></script>
+    <script src="../js/select2.min.js"></script>
+    <script src="../js/award_system_main.js"></script>
+    <script src="../js/js_steptwo.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('select').select2({
+                minimumResultsForSearch: -1,
+                width: '100px'
+            });
+        });
+    </script>
+</body>
+</html>

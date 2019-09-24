@@ -1,0 +1,1133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <link href="../css/themes-jquery-ui.min.css" rel="stylesheet" />
+    <link href="../css/css-ltr/style-ltr.css" rel="stylesheet" />
+    <link href="../css/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../js/bootstrap/popper.min.js"></script>
+    <script src="../js/jquery/jquery.min.js"></script>
+    <script src="../js/jquery/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/award_system_main.js"></script>
+    <link href="../css/select2.min.css" rel="stylesheet" />
+    <script src="../js/select2.min.js"></script>
+</head>
+<body class="">
+
+
+    <header id="header">
+        <div id="pre-nav">
+            <div class="container">
+                <span class="float-left"><b>Award System</b></span>
+                <span class="float-right">Hello, Carmit</span>
+            </div>
+        </div>
+
+        <div id="nav" class="header-shadow">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <ul class="navbar-nav list-inline">
+                        <li class="nav-item">
+                            <div id="hidePnr">
+                                <p>
+                                    <strong>PNR:</strong>
+                                    LLX1234
+                                </p>
+                                <img onclick="editInput('#hidePnr', '#editPnr', 'LLX1234')" src="../icons/star-24-px-copy.png" />
+                            </div>
+                            <div id="editPnr" class="edit-details-pnr" style="display:none">
+                                <label>PNR</label>
+                                <input value="LLX1234" type="text" />
+                                <button>change</button>
+                                <div class="error-msg" style="display:none">
+                                    Member Doesn't Exist
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="hideMember">
+                                <p>
+                                    <strong>Member Number</strong>
+                                    GL 1234567
+                                </p>
+                                <img onclick="editInput('#hideMember', '#editMember', 'LLX1234')" src="../icons/star-24-px-copy.png" />
+                            </div>
+                            <div id="editMember" class="edit-details-member" style="display:none">
+                                <label>Member Number</label>
+                                <input value="GL 1234567" type="text" />
+                                <button data-toggle="modal" data-target="#modalChangeMember">change</button>
+                                <div class="error-msg" style="display:none">
+                                    Member Doesn't Exist
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="nav-item">
+                            <p class="relative">
+                                <div class="border-left"></div>
+                                <strong>Full Name:</strong>
+                                Tal Shafrir
+                            </p>
+
+                        </li>
+                        <li class="nav-item">
+                            <p><strong>Total Points:</strong>22,123</p>
+                            <div class="slidercontainer">
+                                <div class="slider-indicator">
+                                    <span style="position:relative;bottom:20px;">2590</span>
+                                </div>
+                                <span class="zero-data">0</span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="container mt-4" id="main-container">
+        <div class="row">
+            <div class="col-md-9 wrapper-bg-white">
+
+                <h1 class="mb-5 mt-4"><b>Create new Awards</b></h1>
+                <section>
+                    <h3 class="section-name"><b>Products</b></h3>
+                    <div class="row">
+                        <!-- Classic Bonus -->
+                        <div class="col-md-4 pad-5  ">
+                            <div class="box-group single-product">
+                                <div class="products-table-icon-gift">
+                                    <span class="icon-gift">
+                                        <img data-toggle="modal" data-target="#modalOpenTable" src="../icons/star-24-px.png" />
+                                    </span>
+                                </div>
+                                <input type="radio" class="box-option" id="bonus" name="product" value="" />
+                                <table class="products-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="icon">
+                                                    <img class="mini-icon" src="../icons/seat-34-px.png" />
+                                                </span>
+                                                <span class="products-table-small-text">Flight</span>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="products-table-large-text">Classic bonus</span>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <label for="bonus">
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Cash and Points -->
+                        <div class="col-md-4 pad-5 ">
+                            <div class="box-group single-product">
+                                <div class="products-table-icon-gift">
+                                    <span class="icon-gift">
+                                        <img data-toggle="modal" data-target="#modalOpenTable" src="../icons/star-24-px.png" />
+                                    </span>
+                                </div>
+                                <input type="radio" class="box-option" id="cash" name="product" value="" />
+                                <table class="products-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="icon">
+                                                    <img class="mini-icon" src="../icons/gift-34-px-copy-mini.png" />
+                                                </span>
+                                                <span class="products-table-small-text">Flight</span>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="products-table-large-text">Cash and Points</span>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <label for="cash">
+
+                                </label>
+
+
+
+
+
+                            </div>
+                        </div>
+                        <!-- Upgrade -->
+                        <div tabindex="0" class="col-md-4 pad-5 " id="upgrade-select" style="outline: none;">
+                            <div class="box-group single-product">
+                                <input type="radio" class="box-option" id="upgrade" name="product" value="" />
+
+                                <table class="products-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="icon">
+                                                    <img class="mini-icon" src="../icons/upgrade-34-px-mini.png" />
+                                                </span>
+                                                <span class="products-table-small-text">Upgrade</span>
+                                            </td>
+                                            <td class="products-table-icon-gift"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="products-table-large-text">Classic Upgrade</span>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <label for="upgrade">
+
+                                </label>
+                                <div class="select-wrap">
+                                    <select name="form" id="form" class="col-md-4">
+                                        <option value="" disabled selected>From</option>
+                                        <option>Economy Cabin</option>
+                                        <option>Premium Cabin</option>
+                                        <option>Business Cabin</option>
+                                    </select>
+                                    <select name="to" id="to" class="col-md-4">
+                                        <option value="" disabled selected>To</option>
+                                        <option>Economy Cabin</option>
+                                        <option>Premium Cabin</option>
+                                        <option>Business Cabin</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Overweight -->
+                        <div class="col-md-4 pad-5">
+                            <div class="box-group single-product">
+                                <div class="products-table-icon-gift">
+                                    <span class="icon-gift">
+                                        <img data-toggle="modal" data-target="#modalOpenTable" src="../icons/star-24-px.png" />
+                                    </span>
+                                </div>
+                                <input type="radio" class="box-option" id="overweight" name="product" value="" />
+                                <table class="products-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="icon">
+                                                    <img class="mini-icon" src="../icons/baggage-34-px-mini.png" />
+                                                </span>
+                                                <span class="products-table-small-text">Baggage</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="products-table-large-text">Overweight</span>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <label for="overweight">
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Extra Baggage -->
+                        <div class="col-md-4 pad-5 ">
+                            <div class="box-group single-product">
+                                <div class="products-table-icon-gift">
+                                    <span class="icon-gift">
+                                        <img data-toggle="modal" data-target="#modalOpenTable" src="../icons/star-24-px.png" />
+                                    </span>
+                                </div>
+                                <input class="box-option" type="radio" id="extra-baggage" name="product" value="" />
+                                <table class="products-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="icon">
+                                                    <img class="mini-icon" src="../icons/baggage-34-px-mini.png" />
+                                                </span>
+                                                <span class="products-table-small-text">Baggage</span>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="products-table-large-text">Extra baggage</span>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <label for="extra-baggage">
+
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Classic Bonus2 -->
+                        <div class="col-md-4 pad-5 ">
+                            <div class="box-group single-product">
+                                <div class="products-table-icon-gift">
+                                    <span class="icon-gift">
+                                        <img data-toggle="modal" data-target="#modalOpenTable" src="../icons/star-24-px.png" />
+                                    </span>
+                                </div>
+                                <input type="radio" class="box-option" id="classic-bonus2" name="product" value="" />
+                                <table class="products-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="icon">
+                                                    <img class="mini-icon" src="../icons/gift-34-px-copy-mini.png" />
+                                                </span>
+                                                <span class="products-table-small-text">Flights</span>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="products-table-large-text">Classic bonus</span>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <label for="classic-bonus2">
+
+
+                                </label>
+
+                            </div>
+                        </div>
+                        <!-- Executive Seat -->
+                        <div class="col-md-4 pad-5">
+                            <div class="box-group single-product">
+                                <div class="products-table-icon-gift">
+                                    <span class="icon-gift">
+                                        <img data-toggle="modal" data-target="#modalOpenTable" src="../icons/star-24-px.png" />
+                                    </span>
+                                </div>
+                                <input type="radio" class="box-option" id="executive" name="product" value="" />
+                                <table class="products-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="icon">
+                                                    <img class="mini-icon" src="../icons/seat-34-px.png" />
+                                                </span>
+                                                <span class="products-table-small-text">Seat</span>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="products-table-large-text">Executive Seat</span>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <label for="executive">
+
+
+                                </label>
+
+                            </div>
+                        </div>
+                        <!-- Economy Calass Plus -->
+                        <div class="col-md-4 pad-5 ">
+                            <div class="box-group single-product">
+                                <div class="products-table-icon-gift">
+                                    <span class="icon-gift">
+                                        <img data-toggle="modal" data-target="#modalOpenTable" src="../icons/star-24-px.png" />
+                                    </span>
+                                </div>
+                                <input type="radio" class="box-option" id="economy-seat" name="product" value="" />
+                                <table class="products-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="icon">
+                                                    <img class="mini-icon" src="../icons/gift-34-px-copy-mini.png" />
+                                                </span>
+                                                <span class="products-table-small-text">Flights</span>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="products-table-large-text">Economy Class Plus</span>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <label for="economy-seat">
+
+
+                                </label>
+
+                            </div>
+                        </div>
+                        <!-- Preferred Seat -->
+                        <div class="col-md-4 pad-5 ">
+                            <div class="box-group single-product">
+                                <div class="products-table-icon-gift">
+                                    <span class="icon-gift">
+                                        <img data-toggle="modal" data-target="#modalOpenTable" src="../icons/star-24-px.png" />
+                                    </span>
+                                </div>
+                                <input type="radio" class="box-option" id="baggage" name="product" value="" />
+                                <table class="products-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="icon">
+                                                    <img class="mini-icon" src="../icons/seat-34-px-mini.png" />
+                                                </span>
+                                                <span class="products-table-small-text">Seat</span>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="products-table-large-text">Preferred seat</span>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <label for="baggage">
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mt-4">
+                    <h3 class="section-name"><b>Passengers</b></h3>
+                    <div class="row">
+                        <div class="col-md-4 pad-5 ">
+                            <div class="box-group passengers">
+                                <input type="checkbox" class="box-option" id="passenger-1" name="passenger" value="" />
+                                <label for="passenger-1">
+                                    <span>
+                                        <img class="icon float-left" src="../icons/man-34-px.png" />
+                                        <span data-container="body" data-toggle="name-passenger"
+                                              data-placement="bottom" data-content="" class="pass-name">
+                                            Erik Byrd
+                                        </span>
+
+                                    </span>
+
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pad-5">
+                            <div class="box-group passengers">
+                                <input type="checkbox" class="box-option" id="passenger-2" name="passenger" value="" />
+                                <label for="passenger-2">
+                                    <span>
+                                        <img class="float-left icon" src="../icons/man-34-px.png" />
+                                        <span data-container="body"
+                                              data-toggle="name-passenger"
+                                              data-placement="bottom"
+                                              data-content="" class="pass-name">Lliy Bowman</span>
+                                    </span>
+
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pad-5 ">
+                            <div class="box-group passengers">
+                                <input type="checkbox" class="box-option" id="passenger-3" name="passenger" value="" />
+                                <label for="passenger-3">
+                                    <span>
+                                        <img class="icon float-left" src="../icons/woman-34-px.png" />
+                                        <span data-container="body"
+                                              data-toggle="name-passenger"
+                                              data-placement="bottom"
+                                              data-content="" class="pass-name">
+                                            Angel Herrigtman
+                                        </span>
+                                    </span>
+
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pad-5 ">
+                            <div class="box-group passengers">
+                                <input type="checkbox" class="box-option" id="passenger-4" name="passenger" value="" />
+                                <label for="passenger-4">
+                                    <span>
+                                        <img class="icon float-left" src="../icons/woman-stroller-34-px.png" />
+                                        <span data-container="body"
+                                              data-toggle="name-passenger"
+                                              data-placement="bottom"
+                                              data-content="" class="pass-name">
+                                            Bella Simpson
+                                        </span>
+                                    </span>
+
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pad-5">
+                            <div class="box-group passengers">
+                                <input class="box-option" type="checkbox" id="passenger-5" name="passenger" value="" />
+                                <label for="passenger-5">
+                                    <span>
+                                        <img class="icon float-left" src="../icons/man-34-px.png" />
+                                        <span data-container="body"
+                                              data-toggle="name-passenger"
+                                              data-placement="bottom"
+                                              data-content="" class="pass-name">
+                                            eden barucheden baruchedenbaruch
+                                        </span>
+                                    </span>
+
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--<section class="mt-4">
+        <h3 class="section-name"><b>Segments</b></h3>
+        <div id="one_segment" class="segment-box mb-2 pl-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="d-flex">
+                        <div class="departure">
+                            <p class="date-departure">01/04/2018</p>
+                            <p><b>TLV</b></p>
+                        </div>
+                        <div class="wrapper-oval">
+                            <div class="oval-black"></div>
+                            <div class="line"></div>
+                            <div class="oval-white"></div>
+                        </div>
+                        <div class="destination">
+                            <p class="date-destination">01/04/2018</p>
+                            <p><b>LHR</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex segment-row">
+                    <p>LY 317</p>
+                </div>
+                <div class="col-md-2 d-flex segment-row">
+                    <p>Status: HK</p>
+                </div>
+                <div class="col-md-2 d-flex segment-row">
+                    <p>Seg: 1</p>
+                </div>
+            </div>
+        </div>
+        <div class="segment-box mb-2 pl-3 segment-disabled">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="d-flex">
+                        <div class="departure">
+                            <p class="date-departure">01/04/2018</p>
+                            <p><b>TLV</b></p>
+                        </div>
+                        <div class="wrapper-oval">
+                            <div class="oval-black"></div>
+                            <div class="line"></div>
+                            <div class="oval-white"></div>
+                        </div>
+                        <div class="destination">
+                            <p class="date-destination">01/04/2018</p>
+                            <p><b>LHR</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex segment-row">
+                    <p>LY 317</p>
+                </div>
+                <div class="col-md-2 d-flex segment-row">
+                    <p>Status: HK</p>
+                </div>
+                <div class="col-md-2 d-flex segment-row">
+                    <p>Seg: 1</p>
+                </div>
+            </div>
+        </div>
+        <div class="segment-box mb-2 pl-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="d-flex">
+                        <div class="departure">
+                            <p class="date-departure">01/04/2018</p>
+                            <p><b>TLV</b></p>
+                        </div>
+                        <div class="wrapper-oval">
+                            <div class="oval-black"></div>
+                            <div class="line"></div>
+                            <div class="oval-white"></div>
+                        </div>
+                        <div class="destination">
+                            <p class="date-destination">01/04/2018</p>
+                            <p><b>LHR</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex flex-column segment-row">
+                    <p>LY 317</p>
+                </div>
+                <div class="col-md-2 d-flex flex-column segment-row">
+                    <p>Status: HK</p>
+                </div>
+                <div class="col-md-2 d-flex flex-column segment-row">
+                    <p>Seg: 1</p>
+                </div>
+                <div class="col-md-2 pt-3 chk" style="display:none;">
+                    <input type="checkbox" class="form-check-input default-checkbox" name="optionsRadios" id="option-1" value="option1">
+                    <label for="option-1" class="float-label"></label>
+                </div>
+                <div class="col-md-2 pt-3 hover-grup" style="display:none;">
+                    <span>Srart a Group<span class="link-start"><img src="../icons/link-34-px.png" /></span></span>
+                </div>
+                <div class="col-md-2 pt-3 wrapper-group" style="display:none;">
+                    <span>Group 1  <img data-container="body" data-toggle="removeGroup" data-placement="top" data-content="remove group" src="../icons/remove-link-2-34-px.png" /></span>
+                </div>
+                <div class="col-md-2 pt-3 group-number" style="display:none;">
+                    <span><b>Group 1</b></span>
+                </div>
+                <div class="done-btn-grup col-md-2 pt-3" style="display:none;">
+                    <button>Done</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="segment-box mb-2 pl-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="d-flex">
+                        <div class="departure">
+                            <p class="date-departure">01/04/2018</p>
+                            <p><b>TLV</b></p>
+                        </div>
+                        <div class="wrapper-oval">
+                            <div class="oval-black"></div>
+                            <div class="line"></div>
+                            <div class="oval-white"></div>
+                        </div>
+                        <div class="destination">
+                            <p class="date-destination">01/04/2018</p>
+                            <p><b>LHR</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex flex-column segment-row">
+                    <p>LY 317</p>
+                </div>
+                <div class="col-md-2 d-flex flex-column segment-row">
+                    <p>Status: HK</p>
+                </div>
+                <div class="col-md-2 d-flex flex-column segment-row">
+                    <p>Seg: 1</p>
+                </div>
+                <div class="col-md-2 pt-3 chk" style="display:none;">
+                    <input type="checkbox" class="form-check-input default-checkbox" name="optionsRadios" id="option-2" value="option2">
+                    <label for="option-2" class="float-label"></label>
+                </div>
+                <div class="col-md-2 pt-3 hover-grup" style="display:none;">
+                    <span>Srart a Group<span class="link-start"><img src="../icons/link-34-px.png" /></span></span>
+                </div>
+                <div class="done-btn-grup col-md-2 pt-3" style="display:none;">
+                    <button>Done</button>
+                </div>
+                <div class="col-md-2 pt-3 group-number" style="display:none;">
+                    <span><b>Group 1</b></span>
+                </div>
+                <div class="col-md-2 pt-3 wrapper-group" style="display:none;">
+                    <span>Group 1  <img data-container="body" data-toggle="removeGroup" data-placement="top" data-content="remove group" src="../icons/remove-link-2-34-px.png" /></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="segment-box mb-4 pl-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="d-flex">
+                        <div class="departure">
+                            <p class="date-departure">01/04/2018</p>
+                            <p><b>TLV</b></p>
+                        </div>
+                        <div class="wrapper-oval">
+                            <div class="oval-black"></div>
+                            <div class="line"></div>
+                            <div class="oval-white"></div>
+                        </div>
+                        <div class="destination">
+                            <p class="date-destination">01/04/2018</p>
+                            <p><b>LHR</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex flex-column segment-row">
+                    <p>LY 317</p>
+                </div>
+                <div class="col-md-2 d-flex flex-column segment-row">
+                    <p>Status: HK</p>
+                </div>
+                <div class="col-md-2 d-flex flex-column segment-row">
+                    <p>Seg: 1</p>
+                </div>
+                <div class="col-md-2 pt-3 chk" style="display:none;">
+                    <input type="checkbox" class="form-check-input default-checkbox" name="optionsRadios" id="option-4" value="option4">
+                    <label for="option-4" class="float-label"></label>
+                </div>
+                <div class="col-md-2 pt-3 hover-grup" style="display:none;">
+                    <span>Srart a Group<span class="link-start"><img src="../icons/link-34-px.png" /></span></span>
+                </div>
+                <div class="done-btn-grup col-md-2 pt-3" style="display:none;">
+                    <button>Done</button>
+                </div>
+                <div class="col-md-2 pt-3 group-number" style="display:none;">
+                    <span><b>Group 1</b></span>
+                </div>
+                <div class="col-md-2 pt-3 wrapper-group" style="display:none;">
+                    <span>Group 1  <img data-container="body" data-toggle="removeGroup" data-placement="top" data-content="remove group" src="../icons/remove-link-2-34-px.png" /></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="create-btn  mb-3 ">
+            <button>create</button>
+        </div>
+    </section>-->
+
+                <div id="segments">
+                    <h5>Segments</h5>
+                    <div class="first-segment blocked">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="info col-md-4">
+                                    <div class="depart">
+                                        <p class="date">01/04/2018</p>
+                                        <span class="location">TLV</span>
+                                    </div>
+                                    <div class="line">
+                                        <div class="circle-left"></div>
+                                        <div class="circle-right"></div>
+                                    </div>
+                                    <div class="arrival">
+                                        <p class="date">
+                                            01/04/2018
+                                        </p>
+                                        <span class="location">HLR</span>
+                                    </div>
+                                </div>
+                                <div class="flight-num col-md-2">
+                                    LY 317
+                                </div>
+                                <div class="flight-stat col-md-2">
+                                    Status: HK
+                                </div>
+                                <div class="seg-num col-md-2">
+                                    Seg: 1
+                                </div>
+                                <div class="group-num col-md-2">
+                                    Group 1
+                                </div>
+                            </div>
+                        </div>
+                        <button class="start-btn">
+                            <span>
+                                Start a <br> Group
+                            </span>
+                            <img src="../icons/link-34-px.png">
+                        </button>
+                        <button class="done-btn">
+                            DONE
+                        </button>
+                        <button data-container="body" data-toggle="removeGroup" data-placement="top" data-content="remove group" class="remove-btn">
+                            <img src="../icons/remove-link-2-34-px.png">
+                        </button>
+                        <label class="checkbox-container">
+                            <input class="checkbox" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="segment disabled">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="info col-md-4">
+                                    <div class="depart">
+                                        <p class="date">01/04/2018</p>
+                                        <span class="location">TLV</span>
+                                    </div>
+                                    <div class="line">
+                                        <div class="circle-left"></div>
+                                        <div class="circle-right"></div>
+                                    </div>
+                                    <div class="arrival">
+                                        <p class="date">
+                                            01/04/2018
+                                        </p>
+                                        <span class="location">HLR</span>
+                                    </div>
+                                </div>
+                                <div class="flight-num col-md-2">
+                                    LY 317
+                                </div>
+                                <div class="flight-stat col-md-2">
+                                    Status: HK
+                                </div>
+                                <div class="seg-num col-md-2">
+                                    Seg: 1
+                                </div>
+                                <div class="group-num col-md-2">
+                                    Group 1
+                                </div>
+                            </div>
+                        </div>
+                        <button class="start-btn">
+                            <span>
+                                Start a <br> Group
+                            </span>
+                            <img src="../icons/link-34-px.png">
+                        </button>
+                        <button class="done-btn">
+                            DONE
+                        </button>
+                        <button data-container="body" data-toggle="removeGroup" data-placement="top" data-content="remove group" class="remove-btn">
+                            <img src="../icons/remove-link-2-34-px.png">
+                        </button>
+                        <label class="checkbox-container">
+                            <input class="checkbox" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="segment">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="info col-md-4">
+                                    <div class="depart">
+                                        <p class="date">01/04/2018</p>
+                                        <span class="location">TLV</span>
+                                    </div>
+                                    <div class="line">
+                                        <div class="circle-left"></div>
+                                        <div class="circle-right"></div>
+                                    </div>
+                                    <div class="arrival">
+                                        <p class="date">
+                                            01/04/2018
+                                        </p>
+                                        <span class="location">HLR</span>
+                                    </div>
+                                </div>
+                                <div class="flight-num col-md-2">
+                                    LY 317
+                                </div>
+                                <div class="flight-stat col-md-2">
+                                    Status: HK
+                                </div>
+                                <div class="seg-num col-md-2">
+                                    Seg: 1
+                                </div>
+                                <div class="group-num col-md-2">
+                                    Group 1
+                                </div>
+                            </div>
+                        </div>
+                        <button class="start-btn">
+                            <span>
+                                Start a <br> Group
+                            </span>
+                            <img src="../icons/link-34-px.png">
+                        </button>
+                        <button class="done-btn">
+                            DONE
+                        </button>
+                        <button data-container="body" data-toggle="removeGroup" data-placement="top" data-content="remove group" class="remove-btn">
+                            <img src="../icons/remove-link-2-34-px.png">
+
+                        </button>
+                        <label class="checkbox-container">
+                            <input class="checkbox" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="segment">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="info col-md-4">
+                                    <div class="depart">
+                                        <p class="date">01/04/2018</p>
+                                        <span class="location">TLV</span>
+                                    </div>
+                                    <div class="line">
+                                        <div class="circle-left"></div>
+                                        <div class="circle-right"></div>
+                                    </div>
+                                    <div class="arrival">
+                                        <p class="date">
+                                            01/04/2018
+                                        </p>
+                                        <span class="location">HLR</span>
+                                    </div>
+                                </div>
+                                <div class="flight-num col-md-2">
+                                    LY 317
+                                </div>
+                                <div class="flight-stat col-md-2">
+                                    Status: HK
+                                </div>
+                                <div class="seg-num col-md-2">
+                                    Seg: 1
+                                </div>
+                                <div class="group-num col-md-2">
+                                    Group 1
+                                </div>
+                            </div>
+                        </div>
+                        <button class="start-btn">
+                            <span>
+                                Start a <br> Group
+                            </span>
+                            <img src="../icons/link-34-px.png">
+                        </button>
+                        <button class="done-btn">
+                            DONE
+                        </button>
+                        <button data-container="body" data-toggle="removeGroup" data-placement="top" data-content="remove group" class="remove-btn">
+                            <img src="../icons/remove-link-2-34-px.png">
+
+                        </button>
+                        <label class="checkbox-container">
+                            <input class="checkbox" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="segment">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="info col-md-4">
+                                    <div class="depart">
+                                        <p class="date">01/04/2018</p>
+                                        <span class="location">TLV</span>
+                                    </div>
+                                    <div class="line">
+                                        <div class="circle-left"></div>
+                                        <div class="circle-right"></div>
+                                    </div>
+                                    <div class="arrival">
+                                        <p class="date">
+                                            01/04/2018
+                                        </p>
+                                        <span class="location">HLR</span>
+                                    </div>
+                                </div>
+                                <div class="flight-num col-md-2">
+                                    LY 317
+                                </div>
+                                <div class="flight-stat col-md-2">
+                                    Status: HK
+                                </div>
+                                <div class="seg-num col-md-2">
+                                    Seg: 1
+                                </div>
+                                <div class="group-num col-md-2">
+                                    Group 1
+                                </div>
+                            </div>
+                        </div>
+                        <button class="start-btn">
+                            <span>
+                                Start a <br> Group
+                            </span>
+                            <img src="../icons/link-34-px.png">
+                        </button>
+                        <button class="done-btn">
+                            DONE
+                        </button>
+                        <button data-container="body" data-toggle="removeGroup" data-placement="top" data-content="remove group" class="remove-btn">
+                            <img src="../icons/remove-link-2-34-px.png">
+
+                        </button>
+                        <label class="checkbox-container">
+                            <input class="checkbox" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <button class="create-btn">
+                        create
+                    </button>
+                </div>
+
+
+
+            </div>
+            <div class="col-md-3 wrapper-bg-gray">
+                <h3 class="mt-4"><b>Selected Awards</b></h3>
+                <div class="selected-awards">
+                    <div class="wrapper-text">
+                        <p> No awards were </p>
+                        <p> selected yet</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalChangeMember" tabindex="-1" role="dialog" aria-labelledby="modalChangeMemberLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span><img src="../icons/alart-44-px.png" /></span>
+                </div>
+                <div class="modal-body">
+                    Changing member number will erase all the changes that have been made. 
+                    Are you sure you want to continue?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary cancel-btn" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary continue-btn" data-dismiss="modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalOpenTable" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span><img src="../icons/gift-34-px-copy.png" />Flights<span>Classic bonus</span></span>
+                </div>
+                <div class="modal-body">
+                    <div id="gift-table">
+                        <table class="table table-flight">
+                            <thead>
+                                <tr class="table-header">
+                                    <th scope="col">Reward ID</th>
+                                    <th scope="col">Origin</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Trip type</th>
+                                    <th scope="col">Cabin</th>
+                                    <th scope="col">RBD List</th>
+                                    <th scope="col">Upgraded Cabin</th>
+                                    <th scope="col">Upgraded RBD List</th>
+                                    <th scope="col" aria-hidden="true"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>16930</td>
+                                    <td>Thornton</td>
+                                    <td>JFK</td>
+                                    <td>OWY</td>
+                                    <td>Y</td>
+                                    <td>M.N.E</td>
+                                    <td>C</td>
+                                    <td>D</td>
+                                    <td class="td-collapse open-condition">
+                                        Conditions
+                                        <a href="javascript:void(0)"><img src="../icons/open-row-24-px.png" /></a>
+                                    </td>
+                                </tr>
+                                <tr class="wrapper-tr-condition" style="display:none;">
+
+                                    <td class="condition" colspan="9">
+                                        <div class="condition-inner">
+                                            <div class="condition-text">Flight Products For Entitlements RNB event 2113 Subject to clubs and promotions regulations</div>
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+
+                                    <td>16930</td>
+                                    <td>TLV</td>
+                                    <td>JFK</td>
+                                    <td>OWY</td>
+                                    <td>Y</td>
+                                    <td>M.N.E</td>
+                                    <td>C</td>
+                                    <td>D</td>
+                                    <td class="td-collapse open-condition">
+                                        Conditions
+                                        <a href="javascript:void(0)"><img src="../icons/open-row-24-px.png" /></a>
+                                    </td>
+
+                                </tr>
+                                <tr class="wrapper-tr-condition" style="display:none;">
+
+                                    <td class="condition" colspan="9">
+                                        <div class="condition-inner">
+                                            <div class="condition-text">Flight Products For Entitlements RNB event 2113 Subject to clubs and promotions regulations</div>
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr class="different-id">
+
+                                    <td>16930</td>
+                                    <td>TLV</td>
+                                    <td>JFK</td>
+                                    <td>OWY</td>
+                                    <td>Y</td>
+                                    <td>M.N.E</td>
+                                    <td>C</td>
+                                    <td>D</td>
+                                    <td class="td-collapse open-condition">
+                                        Conditions
+                                        <a href="javascript:void(0)"><img src="../icons/open-row-24-px.png" /></a>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="wrapper-tr-condition" style="display:none;">
+
+                                    <td class="condition" colspan="9">
+                                        <div class="condition-inner">
+                                            <div class="condition-text">Flight Products For Entitlements RNB event 2113 Subject to clubs and promotions regulations</div>
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('select').select2({
+                minimumResultsForSearch: -1,
+                width: '100px'
+            });
+        })
+    </script>
+</body>
+</html>
